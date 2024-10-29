@@ -1,0 +1,164 @@
+.numbers {
+  position: relative;
+
+  padding: 5.3rem 0;
+
+  color: $white;
+
+  --scaleX: 0;
+  --scaleX2: 0;
+  --scaleY: 0;
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: $black;
+
+    @media (min-width: 48em) {
+      transform: scaleX(var(--scaleX));
+      transform-origin: left;
+    }
+  }
+
+  @media (max-width: 48em) {
+    padding: 4.6rem 3rem;
+    padding-bottom: 6rem;
+  }
+
+  ._blue-colored {
+    color: $brightBlue;
+  }
+
+  // .numbers__container
+
+  &__container {
+    position: relative;
+    z-index: 2;
+
+    @media (max-width: 48em) {
+      &.container {
+        padding: 0;
+      }
+    }
+  }
+
+  // .numbers__list
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
+    row-gap: 4rem;
+
+    overflow: hidden;
+
+    @media (min-width: 48em) {
+      padding: 0 10.8rem;
+
+      grid-template-columns: repeat(3, 20rem);
+      row-gap: 3rem;
+      column-gap: 30.3rem;
+    }
+  }
+
+  // .numbers__item
+
+  &__item {
+    position: relative;
+
+    opacity: 0;
+
+    @media (min-width: 48em) {
+      &:not(:last-child) {
+        &::after {
+          content: '';
+
+          position: absolute;
+          top: 50%;
+          right: -15rem;
+
+          width: 1px;
+          height: 10rem;
+
+          background-color: $gray;
+
+          transform: translate(100%, -50%) scaleY(var(--scaleY));
+        }
+      }
+    }
+
+    @media (max-width: 48em) {
+      min-width: 29.2rem;
+
+      &:nth-child(2n) {
+        &::after {
+          content: '';
+
+          position: absolute;
+          bottom: -2.6rem;
+          left: -57vw;
+
+          width: 100vw;
+          height: 1px;
+
+          background-color: $gray;
+
+          opacity: 0.6;
+
+          transform: scaleX(var(--scaleX2));
+          transform-origin: left;
+        }
+      }
+    }
+  }
+
+  // .numbers__inner
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+
+    @media (max-width: 48em) {
+      row-gap: 0.8rem;
+    }
+  }
+
+  // .numbers__heading
+
+  &__heading {
+    font-weight: 700;
+    font-size: 6.4rem;
+    line-height: 7.7rem;
+
+    @media (max-width: 48em) {
+      font-size: 8rem;
+      line-height: 9.6rem;
+    }
+  }
+
+  // .numbers__txt
+
+  &__txt {
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    text-transform: uppercase;
+
+    @media (max-width: 48em) {
+      font-size: 2.4rem;
+      line-height: 2.8rem;
+      letter-spacing: 0.1rem;
+    }
+
+    @media (min-width: 48em) {
+      min-width: 24rem;
+    }
+  }
+}

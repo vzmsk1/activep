@@ -1,0 +1,154 @@
+.location {
+  position: relative;
+
+  margin-bottom: 0;
+
+  transform: translateY(20%);
+  opacity: 0;
+
+  @media (min-width: 48em) {
+    min-height: 88.1rem;
+
+    .title-wrap__svg {
+      left: -5.5rem;
+
+      // width: 31rem;
+      width: 0;
+
+      overflow: hidden;
+
+      clip-path: inset(0 0 0 16.5rem);
+      transform: rotate(180deg);
+    }
+  }
+
+  @media (max-width: 48em) {
+    padding-bottom: 43.6rem;
+  }
+
+  .title-wrap__svg {
+    z-index: 2;
+
+    overflow: hidden;
+
+    opacity: 0.6;
+  }
+
+  // .location__container
+
+  &__container {
+    @media (min-width: 48em) {
+      padding-top: 6.1rem;
+    }
+
+    @media (max-width: 48em) {
+      background-color: $black;
+    }
+
+    ._blue-colored {
+      color: $brightBlue;
+    }
+  }
+
+  // .location__content
+
+  &__content {
+    position: relative;
+    z-index: 2;
+
+    padding: 18rem 0 59.4rem 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    color: $white;
+
+    @media (min-width: 48em) {
+      margin-left: auto;
+      padding: 12rem 5.5rem;
+
+      row-gap: 9rem;
+      width: 71.3rem;
+
+      &::after {
+        content: '';
+
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+
+        width: 96rem;
+        height: 100%;
+
+        background-color: $black;
+      }
+    }
+  }
+
+  // .location__title-wrap
+
+  &__title-wrap {
+    @media (max-width: 48em) {
+      margin-bottom: 10rem;
+    }
+  }
+
+  // .location__text-wrap
+
+  &__text-wrap {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+
+    @media (max-width: 48em) {
+      margin-bottom: 6rem;
+
+      row-gap: 4rem;
+    }
+  }
+
+  // .location__text
+
+  &__text {
+    max-width: 38.9rem;
+
+    @media (max-width: 48em) {
+      max-width: 46.8rem;
+
+      line-height: 170%;
+    }
+  }
+
+  // .location__btn
+
+  &__btn {
+    position: relative;
+    z-index: 2;
+  }
+
+  // .location__map
+
+  &__map {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 1.6rem 4.8rem rgba(149, 157, 165, 0.2);
+
+    @media (max-width: 48em) {
+      top: auto;
+      bottom: 0;
+      left: 3rem;
+
+      height: 92.8rem;
+      width: calc(100% - 6rem);
+    }
+  }
+}

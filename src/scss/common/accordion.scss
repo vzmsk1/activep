@@ -1,0 +1,273 @@
+.accordion {
+  display: flex;
+  flex-direction: column;
+
+  --scaleX: 0;
+  --opacity: 0;
+
+  // .accordion__item
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+
+    overflow: hidden;
+
+    transform: translateX(-24rem);
+
+    @media (max-width: 48em) {
+      transform: translateX(-3rem);
+    }
+
+    &:first-child {
+      .accordion__head::after {
+        border-bottom: none;
+      }
+    }
+    &:last-child {
+      .accordion__head::after {
+        border-top: none;
+      }
+    }
+
+    &._is-active {
+      .accordion__head::after {
+        border-bottom: none;
+      }
+    }
+  }
+
+  // .accordion__head
+
+  &__head {
+    position: relative;
+
+    padding: 2.8rem 4rem 2.8rem 57.6rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 3rem;
+    width: 100%;
+
+    @media (max-width: 48em) {
+      padding: 3rem 0 3rem 17rem;
+    }
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: -24rem;
+
+      width: 100vw;
+      height: 100%;
+      border-top: 1px solid $gray;
+      border-bottom: 1px solid $gray;
+
+      background-color: $white;
+
+      opacity: var(--opacity);
+      transform: scaleX(var(--scaleX));
+      transform-origin: left;
+
+      transition: background-color 0.3s ease;
+
+      ._is-active & {
+        background-color: $black;
+      }
+
+      @media (max-width: 48em) {
+        left: -3rem;
+      }
+    }
+  }
+
+  // .accordion__number
+
+  &__number {
+    position: absolute;
+    bottom: -5.4rem;
+    left: 0;
+
+    font-weight: 700;
+    font-size: 12.8rem;
+    line-height: 15.5rem;
+    color: #c4c4c4;
+    opacity: 0.6;
+
+    transform: translateY(100%);
+
+    transition: color 0.3s ease;
+
+    ._is-active & {
+      color: #5f5f5f;
+    }
+
+    @media (max-width: 48em) {
+      left: -3rem;
+
+      font-size: 12.8rem;
+      line-height: 15.4rem;
+    }
+  }
+
+  // .accordion__title
+
+  &__title {
+    font-weight: 500;
+
+    transition: color 0.3s ease;
+
+    .char {
+      opacity: 0;
+    }
+
+    ._is-active & {
+      color: $white;
+    }
+  }
+
+  // .accordion__icon
+
+  &__icon {
+    display: inline-flex;
+
+    opacity: 0;
+
+    transition: transform 0.3s ease, color 0.3s ease;
+
+    ._is-active & {
+      color: $white;
+
+      transform: rotate(45deg);
+    }
+
+    svg {
+      width: 4.5rem;
+      height: 4.5rem;
+
+      @media (max-width: 48em) {
+        width: 5rem;
+        height: 5rem;
+      }
+    }
+  }
+
+  // .accordion__body
+
+  &__body {
+    position: relative;
+
+    display: grid;
+    grid-template-rows: 0fr;
+    width: 100vw;
+
+    color: $white;
+
+    background-color: $black;
+
+    transform: translateX(-24rem);
+
+    transition: grid-template-rows 0.3s ease;
+
+    @media (max-width: 48em) {
+      transform: translateX(-3rem);
+    }
+
+    ._is-active & {
+      grid-template-rows: 1fr;
+      border-top: 1px solid $gray;
+    }
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: -24rem;
+
+      width: 100vw;
+      height: 100%;
+
+      background-color: $black;
+
+      @media (max-width: 48em) {
+        left: -3rem;
+      }
+    }
+  }
+
+  // .accordion__inner
+
+  &__inner {
+    overflow: hidden;
+  }
+
+  // .accordion__list
+
+  &__list {
+    padding: 5rem 0;
+
+    display: grid;
+    justify-items: start;
+    row-gap: 0.6rem;
+
+    @media (min-width: 48em) {
+      padding: 4.6rem 4.6rem 4.6rem 23.5rem;
+
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 8.2rem;
+      row-gap: 1rem;
+    }
+  }
+
+  // .accordion__list-item
+
+  &__list-item {
+    display: flex;
+    column-gap: 0.8rem;
+
+    @media (max-width: 48em) {
+      column-gap: 1.2rem;
+    }
+
+    @media (any-hover: hover) and (min-width: 48em) {
+      &:hover {
+        &::before {
+          width: 2.4rem;
+
+          background-color: $blue;
+        }
+      }
+    }
+
+    &::before {
+      content: '';
+
+      margin-top: 1.3rem;
+
+      width: 0.7rem;
+      height: 1px;
+
+      background-color: $white;
+
+      transition: width 0.3s ease, background-color 0.3s ease;
+
+      @media (max-width: 48em) {
+        margin-top: 1.7rem;
+
+        width: 1rem;
+      }
+    }
+  }
+
+  // .accordion__txt
+
+  &__txt {
+  }
+}

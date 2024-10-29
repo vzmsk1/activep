@@ -56,6 +56,15 @@ module.exports = {
     host: 'local-ip',
     static: path.resolve(__dirname, 'app'),
     watchFiles: path.join(__dirname, 'src'),
+    client: {
+      overlay: false,
+
+      // overlay: {
+      //  errors: true,
+      //  warnings: false,
+      //  runtimeErrors: true,
+      //}
+    },
   },
 
   // source map

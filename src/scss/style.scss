@@ -17,6 +17,70 @@ $gray: #c4c4c4;
 // base scss file
 @import 'base/set';
 
+@import 'base/header';
+@import 'base/footer';
+
+main {
+  padding-top: 9rem;
+
+  @media (max-width: 48em) {
+    padding-top: 14rem;
+  }
+}
+
+._show-menu {
+  body {
+    overflow: hidden;
+    touch-action: none;
+  }
+}
+
+.wrapper {
+  overflow: hidden;
+}
+
+._blue-colored {
+  color: $blue;
+}
+
+._gray-colored {
+  color: $gray;
+}
+
+.marker {
+  svg {
+    width: 4.6rem;
+    height: 6.6rem;
+
+    @media (max-width: 48em) {
+      width: 7.6rem;
+      height: 11rem;
+    }
+  }
+}
+
+ymaps canvas {
+  filter: grayscale(1);
+}
+
+// ------------------------------- common styles ----------------------------
+
+@import 'common/typo';
+@import 'common/btn';
+@import 'common/layout';
+@import 'common/accordion';
+@import 'common/field';
+@import 'common/controls';
+
 // --------------------------------------------------------------------------
 
 // sections
+@import 'sections/hero';
+@import 'sections/numbers';
+@import 'sections/steps';
+@import 'sections/advantages';
+@import 'sections/request';
+@import 'sections/reviews';
+@import 'sections/clients';
+@import 'sections/docs';
+@import 'sections/location';

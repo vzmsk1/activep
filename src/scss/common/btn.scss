@@ -1,0 +1,124 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 4rem;
+
+  background-color: $blue;
+
+  overflow: hidden;
+
+  @media (max-width: 48em) {
+    width: 100%;
+    border-radius: 8rem;
+  }
+
+  @media (any-hover: hover) and (min-width: 48em) {
+    &:hover {
+      .btn__txt-wrap::after {
+        width: calc(100% + 4.5rem - 2px);
+      }
+      .btn__icon svg {
+        color: $black;
+      }
+    }
+  }
+
+  // .btn__txt-wrap
+
+  &__txt-wrap {
+    position: relative;
+
+    padding: 1.6rem 3.9rem;
+
+    text-align: center;
+
+    @media (max-width: 48em) {
+      padding: 2.4rem;
+
+      flex: 1 1 auto;
+    }
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      top: 1px;
+      left: 1px;
+
+      width: calc(100% - 2px);
+      height: calc(100% - 2px);
+      border-radius: 4rem;
+
+      background-color: $white;
+
+      transition: width 0.3s ease;
+
+      @media (max-width: 48em) {
+        border-radius: 8rem;
+      }
+    }
+  }
+
+  // .btn__txt
+
+  &__txt {
+    position: relative;
+    z-index: 2;
+
+    display: block;
+
+    font-weight: 500;
+  }
+
+  // .btn__icon
+
+  &__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 4.5rem;
+
+    @media (max-width: 48em) {
+      width: 9rem;
+    }
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+
+      color: $white;
+
+      transform: rotate(-135deg) translate(0.3rem, -0.3rem);
+
+      transition: color 0.3s ease;
+
+      @media (max-width: 48em) {
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+  }
+
+  &_white {
+    color: $white;
+
+    background-color: $white;
+
+    .btn__txt-wrap::after {
+      background-color: $black;
+    }
+
+    @media (any-hover: hover) and (min-width: 48em) {
+      &:hover {
+        .btn__icon svg {
+          color: $white;
+        }
+      }
+    }
+
+    svg {
+      color: $black;
+    }
+  }
+}

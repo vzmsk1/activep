@@ -113,6 +113,10 @@ input[type='number'] {
 
 section {
   margin-bottom: 12rem;
+
+  @media (max-width: 48em) {
+    margin-bottom: 18rem;
+  }
 }
 
 .container {
@@ -137,5 +141,11 @@ section {
   .container {
     padding: 0 3rem;
     width: 100%;
+  }
+}
+
+@media (min-width: 1920px) {
+  html {
+    font-size: 10px;
   }
 }
