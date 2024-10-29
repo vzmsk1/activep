@@ -93,21 +93,21 @@ window.addEventListener('load', function () {
         {
           '--y': 1,
         },
-        1.3
+        0.5
       )
       .to(
         '.steps__item',
         {
           '--x': 1,
         },
-        3
+        1.5
       )
       .to(
         '.steps__item',
         {
           '--opacity': 1,
         },
-        4
+        2.5
       )
       .to(
         '.item-steps__inner',
@@ -118,7 +118,7 @@ window.addEventListener('load', function () {
           '--scaleY': 1,
           duration: 0.5,
         },
-        1
+        0
       );
     return () => {};
   });
@@ -129,7 +129,7 @@ window.addEventListener('load', function () {
         scrollTrigger: {
           trigger: item,
           once: true,
-          start: 'top 90%',
+          start: 'top 70%',
         },
       })
       .to(item.querySelector('.item-advantages__inner'), {
@@ -143,7 +143,7 @@ window.addEventListener('load', function () {
       .timeline({
         scrollTrigger: {
           trigger: section,
-          start: 'top 70%',
+          start: 'top 60%',
           once: true,
         },
       })
@@ -156,24 +156,28 @@ window.addEventListener('load', function () {
         { translateY: 0, opacity: 1 },
         0
       )
-      .to(section.querySelector('.accordion'), {
-        '--scaleX': 1,
-        '--opacity': 1,
-      })
+      .to(
+        section.querySelector('.accordion'),
+        {
+          '--scaleX': 1,
+          '--opacity': 1,
+        },
+        0
+      )
       .to(
         section.querySelectorAll('.accordion__number'),
         { translateY: 0, opacity: 1 },
-        1
+        0
       )
       .to(
         section.querySelectorAll('.accordion__title .char'),
         { opacity: 1, stagger: 0.02, duration: 0.3 },
-        1.5
+        0.5
       )
       .to(
         section.querySelectorAll('.accordion__icon'),
         { opacity: 1, stagger: 0.3 },
-        1.5
+        0.5
       )
 
       .to(
@@ -182,7 +186,7 @@ window.addEventListener('load', function () {
           '--width': '100%',
           opacity: 1,
         },
-        0.5
+        0
       )
       .to(
         section.querySelectorAll('.request .field'),
@@ -206,14 +210,14 @@ window.addEventListener('load', function () {
         {
           opacity: 1,
         },
-        1
+        0.5
       )
       .to(
         section.querySelector('.pagination'),
         {
           opacity: 1,
         },
-        1.5
+        1
       )
       .to(
         section.querySelectorAll('.clients-card__inner'),
