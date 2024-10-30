@@ -14,7 +14,7 @@ async function initMap() {
     YMapMarker,
     YMapCenterLocation,
   } = ymaps3;
-  const map = new YMap(document.querySelector('.location__map'), {
+  const map = new YMap(document.getElementById('map'), {
     location: {
       center:
         window.innerWidth <= 768
@@ -53,6 +53,6 @@ async function initMap() {
   });
 }
 
-if (document.querySelector('.location__map')) {
+if (document.getElementById('map')) {
   initMap();
 }

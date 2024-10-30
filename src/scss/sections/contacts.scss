@@ -1,0 +1,419 @@
+.contacts {
+  margin-bottom: 0;
+
+  .char {
+    opacity: 0;
+  }
+
+  @media (max-width: 48em) {
+    overflow: hidden;
+  }
+
+  &__heading,
+  &__group {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  // .contacts__item-content
+
+  &__item-content {
+    width: 100%;
+
+    opacity: 0;
+  }
+
+  // .contacts__container
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .contacts__head
+
+  &__head {
+    padding: 5.5rem 0;
+
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 48em) {
+      position: relative;
+      z-index: 1;
+
+      padding: 8rem 0;
+
+      row-gap: 1rem;
+
+      &::after {
+        content: '';
+
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: -3rem;
+
+        width: 100vw;
+        height: 100%;
+
+        background-color: $white;
+      }
+    }
+  }
+
+  // .contacts__heading
+
+  &__heading {
+    font-weight: 600;
+    font-size: 16rem;
+    line-height: 19.1rem;
+
+    @media (max-width: 48em) {
+      font-size: 8.8rem;
+      line-height: 10.4rem;
+    }
+  }
+
+  // .contacts__group
+
+  &__group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (min-width: 48em) {
+      margin-top: -1rem;
+    }
+  }
+
+  // .contacts__link
+
+  &__link {
+    display: flex;
+    align-items: center;
+    column-gap: 2.3rem;
+
+    @media (max-width: 48em) {
+      color-scheme: 1.4rem;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        .contacts__link-icon svg {
+          transform: translate(-0.5rem, 1.5rem);
+        }
+      }
+    }
+  }
+
+  // .contacts__link-txt
+
+  &__link-txt {
+    font-weight: 500;
+    font-size: 9.6rem;
+    line-height: 11.3rem;
+
+    @media (max-width: 48em) {
+      font-size: 6rem;
+      line-height: 7rem;
+    }
+  }
+
+  // .contacts__link-icon
+
+  &__link-icon {
+    display: inline-flex;
+
+    transform: rotate(-135deg) translate(0.5rem, 0.5rem);
+
+    @media (max-width: 48em) {
+      transform: rotate(-135deg) translate(1rem, 0.5rem);
+    }
+
+    svg {
+      width: 7rem;
+      height: 7rem;
+
+      color: $blue;
+
+      transition: transform 0.3s ease;
+
+      @media (max-width: 48em) {
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+  }
+
+  // .contacts__socials
+
+  &__socials {
+  }
+
+  // .contacts__body
+
+  &__body {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    opacity: 0;
+    transform: translateY(10%);
+
+    --clipPath: inset(0 100% 0 0);
+  }
+
+  // .contacts__map
+
+  &__map {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 86%;
+    width: 100vw;
+
+    transform: translateX(calc((100vw - 144rem) / -2));
+
+    @media (max-width: 48em) {
+      top: -50rem;
+
+      height: calc(114.2rem + 50rem);
+
+      transform: translateX(-3rem);
+    }
+  }
+
+  // .contacts__content
+
+  &__content {
+    position: relative;
+    z-index: 2;
+
+    margin-top: 55.5rem;
+    padding: 8rem;
+    padding-top: 7rem;
+
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 0.8rem 2.4rem rgba(149, 157, 165, 0.2);
+
+    overflow: hidden;
+
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: $white;
+
+    background-color: $black;
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      top: 4.5rem;
+      left: -31rem;
+
+      width: 49.1rem;
+      height: 9rem;
+
+      background: url(@img/bg/vector.svg) center / contain no-repeat;
+
+      clip-path: var(--clipPath);
+    }
+
+    @media (max-width: 48em) {
+      margin-top: 65.8rem;
+      padding: 6.4rem 5rem;
+      padding-top: 4rem;
+
+      flex-direction: column;
+      justify-content: flex-start;
+      row-gap: 9rem;
+
+      font-size: 2.8rem;
+      line-height: 3.2rem;
+
+      &::after {
+        top: -3rem;
+        left: -40rem;
+
+        width: 58.1rem;
+        height: 23rem;
+      }
+    }
+
+    ._blue-colored {
+      color: $brightBlue;
+    }
+  }
+
+  // .contacts__item
+
+  &__item {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 2rem;
+
+    @media (min-width: 48em) {
+      &:nth-child(2) {
+        padding-right: 9rem;
+      }
+
+      .txt14 {
+        line-height: 175%;
+      }
+    }
+
+    @media (max-width: 48em) {
+      row-gap: 2.4rem;
+    }
+  }
+
+  // .contacts__text
+
+  &__text {
+    @media (min-width: 48em) {
+      max-width: 31.2rem;
+    }
+  }
+
+  // .contacts__list
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 1.5rem;
+    width: 100%;
+
+    @media (max-width: 48em) {
+      row-gap: 2.4rem;
+    }
+  }
+
+  // .contacts__list-item
+
+  &__list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+
+    a.contacts__txt {
+      @media (any-hover: hover) {
+        &:hover {
+          color: $brightBlue;
+        }
+      }
+    }
+  }
+
+  // .contacts__subtitle
+
+  &__subtitle {
+    opacity: 0.5;
+
+    @media (max-width: 48em) {
+      font-size: 2.4rem;
+      line-height: 4rem;
+    }
+  }
+
+  // .contacts__txt
+
+  &__txt {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 0.5rem;
+
+    transition: color 0.3s ease;
+  }
+
+  // .contacts__txt-content
+
+  &__txt-content {
+  }
+
+  // .contacts__schedule
+
+  &__schedule {
+    width: 100%;
+  }
+}
+
+.socials-contacts {
+  display: flex;
+  column-gap: 2rem;
+
+  @media (max-width: 48em) {
+    column-gap: 1.4rem;
+  }
+
+  // .socials-contacts__item
+
+  &__item {
+    display: inline-flex;
+  }
+
+  // .socials-contacts__inner
+
+  &__inner {
+    width: 6rem;
+    height: 6rem;
+
+    border-radius: 50%;
+
+    @media (max-width: 48em) {
+      width: 7rem;
+      height: 7rem;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        svg {
+          color: $blue;
+        }
+      }
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+
+      transition: color 0.3s ease;
+    }
+  }
+}
+
+.schedule-contacts {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+
+  @media (max-width: 48em) {
+    column-gap: 2.4rem;
+  }
+
+  &::after {
+    content: '';
+
+    flex: 1 1 auto;
+    height: 1px;
+
+    background-color: $brightBlue;
+  }
+
+  // .schedule-contacts__txt
+
+  &__txt {
+    &:last-child {
+      order: 1;
+    }
+  }
+}
