@@ -66,3 +66,25 @@
     line-height: 12rem;
   }
 }
+
+.txt70 {
+  font-weight: 600;
+  font-size: 7rem;
+  line-height: 97%;
+
+  @media (max-width: 48em) {
+    font-size: 7.2rem;
+    line-height: 8rem;
+  }
+}
+
+.txt40 {
+  font-weight: 600;
+  font-size: 4rem;
+  line-height: 5rem;
+
+  @media (max-width: 48em) {
+    font-size: 5.6rem;
+    line-height: 7rem;
+  }
+}

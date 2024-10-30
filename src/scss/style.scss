@@ -71,6 +71,7 @@ ymaps canvas {
 @import 'common/accordion';
 @import 'common/field';
 @import 'common/controls';
+@import 'common/breadcrumbs';
 
 // --------------------------------------------------------------------------
 
@@ -85,3 +86,5 @@ ymaps canvas {
 @import 'sections/docs';
 @import 'sections/location';
 @import 'sections/contacts';
+@import 'sections/about-hero';
+@import 'sections/about';

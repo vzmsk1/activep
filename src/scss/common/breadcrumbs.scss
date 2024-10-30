@@ -1,0 +1,48 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  column-gap: 1.6rem;
+
+  @media (max-width: 48em) {
+    column-gap: 3.2rem;
+  }
+
+  // .breadcrumbs__txt
+
+  &__txt {
+    font-weight: 500;
+
+    @media (max-width: 48em) {
+      font-size: 3.2rem;
+      line-height: 3.8rem;
+    }
+
+    &:not(:last-child) {
+      position: relative;
+
+      color: $gray;
+
+      &::after {
+        content: '/';
+
+        position: absolute;
+        top: 50%;
+        right: -0.8rem;
+
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        color: $gray;
+
+        transform: translate(50%, -50%);
+
+        @media (max-width: 48em) {
+          right: -1.6rem;
+
+          font-size: 3.2rem;
+          line-height: 3.8rem;
+        }
+      }
+    }
+  }
+}

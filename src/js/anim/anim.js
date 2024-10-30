@@ -13,6 +13,105 @@ window.addEventListener('load', function () {
   const heroTl = gsap.timeline();
   const numbersTl = gsap.timeline();
 
+  document.querySelectorAll('section').forEach(section => {
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: section,
+          start: 'top 60%',
+          once: true,
+        },
+      })
+      .to(section, { opacity: 1, translateY: 0 })
+      .to(section.querySelector('.title-wrap__svg'), { width: '49.1rem' }, 0.5)
+      .to(
+        section.querySelectorAll(
+          '.title-wrap__title, .section-head .btn , .section-head .controls'
+        ),
+        { translateY: 0, opacity: 1 },
+        0
+      )
+      .to(
+        section.querySelector('.accordion'),
+        {
+          '--scaleX': 1,
+          '--opacity': 1,
+        },
+        0
+      )
+      .to(
+        section.querySelectorAll('.accordion__number'),
+        { translateY: 0, opacity: 1 },
+        0
+      )
+      .to(
+        section.querySelectorAll('.accordion__title .char'),
+        { opacity: 1, stagger: 0.02, duration: 0.3 },
+        0.5
+      )
+      .to(
+        section.querySelectorAll('.accordion__icon'),
+        { opacity: 1, stagger: 0.3 },
+        0.5
+      )
+
+      .to(
+        section.querySelector('.request__marquee'),
+        {
+          '--width': '100%',
+          opacity: 1,
+        },
+        0
+      )
+      .to(
+        section.querySelectorAll('.request .field'),
+        {
+          '--scaleX': 1,
+          opacity: 1,
+        },
+        1
+      )
+      .to(
+        section.querySelectorAll('.request__btn, .request__txt .char'),
+        {
+          opacity: 1,
+          stagger: 0.02,
+          duration: 0.3,
+        },
+        1.5
+      )
+      .to(
+        section.querySelector('.reviews__slider'),
+        {
+          opacity: 1,
+        },
+        0.5
+      )
+      .to(
+        section.querySelector('.pagination'),
+        {
+          opacity: 1,
+        },
+        1
+      )
+      .to(
+        section.querySelectorAll('.clients-card__inner'),
+        {
+          opacity: 1,
+          stagger: 0.3,
+        },
+        0.5
+      )
+      .to(
+        section.querySelectorAll('.slide-docs'),
+        {
+          opacity: 1,
+          stagger: 0.3,
+        },
+        0.5
+      );
+  });
+
   gsap.to('header', { translateY: 0 });
   gsap.to(
     '.header__logo-wrap, .header__item, .header__hamburger',
@@ -137,105 +236,6 @@ window.addEventListener('load', function () {
           opacity: 1,
         });
     });
-
-    document.querySelectorAll('section').forEach(section => {
-      gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: section,
-            start: 'top 60%',
-            once: true,
-          },
-        })
-        .to(section, { opacity: 1, translateY: 0 })
-        .to(section.querySelector('.title-wrap__svg'), { width: '49.1rem' })
-        .to(
-          section.querySelectorAll(
-            '.title-wrap__title, .section-head .btn , .section-head .controls'
-          ),
-          { translateY: 0, opacity: 1 },
-          0
-        )
-        .to(
-          section.querySelector('.accordion'),
-          {
-            '--scaleX': 1,
-            '--opacity': 1,
-          },
-          0
-        )
-        .to(
-          section.querySelectorAll('.accordion__number'),
-          { translateY: 0, opacity: 1 },
-          0
-        )
-        .to(
-          section.querySelectorAll('.accordion__title .char'),
-          { opacity: 1, stagger: 0.02, duration: 0.3 },
-          0.5
-        )
-        .to(
-          section.querySelectorAll('.accordion__icon'),
-          { opacity: 1, stagger: 0.3 },
-          0.5
-        )
-
-        .to(
-          section.querySelector('.request__marquee'),
-          {
-            '--width': '100%',
-            opacity: 1,
-          },
-          0
-        )
-        .to(
-          section.querySelectorAll('.request .field'),
-          {
-            '--scaleX': 1,
-            opacity: 1,
-          },
-          1
-        )
-        .to(
-          section.querySelectorAll('.request__btn, .request__txt .char'),
-          {
-            opacity: 1,
-            stagger: 0.02,
-            duration: 0.3,
-          },
-          1.5
-        )
-        .to(
-          section.querySelector('.reviews__slider'),
-          {
-            opacity: 1,
-          },
-          0.5
-        )
-        .to(
-          section.querySelector('.pagination'),
-          {
-            opacity: 1,
-          },
-          1
-        )
-        .to(
-          section.querySelectorAll('.clients-card__inner'),
-          {
-            opacity: 1,
-            stagger: 0.3,
-          },
-          0.5
-        )
-        .to(
-          section.querySelectorAll('.slide-docs'),
-          {
-            opacity: 1,
-            stagger: 0.3,
-          },
-          0.5
-        );
-    });
   } else if (document.querySelector('.contacts')) {
     gsap.to('.contacts__heading, .contacts__group', {
       opacity: 1,
@@ -257,7 +257,7 @@ window.addEventListener('load', function () {
           opacity: 1,
           stagger: 0.02,
         },
-        1
+        0.5
       )
       .to(
         '.contacts__item-content',
@@ -265,7 +265,7 @@ window.addEventListener('load', function () {
           opacity: 1,
           stagger: 0.1,
         },
-        2
+        1
       );
 
     gsap
@@ -287,5 +287,42 @@ window.addEventListener('load', function () {
         },
         0.5
       );
+  } else if (document.querySelector('.about-hero')) {
+    gsap.to(
+      '.about-hero__breadcrumbs, .about-hero__title, .about-hero__txt, .about-hero__btn',
+      {
+        opacity: 1,
+        translateY: 0,
+        stagger: 0.3,
+      }
+    );
+
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: '.about__content',
+          start: 'top 80%',
+          once: true,
+        },
+      })
+      .to(
+        '.about__content .about__text',
+        { opacity: 1, translateY: 0, stagger: 0.1 },
+        0.5
+      );
+
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: '.about__info',
+          start: 'top 80%',
+          once: true,
+        },
+      })
+      .to('.about__subtitle, .about__info .about__text-wrap', {
+        opacity: 1,
+        translateY: 0,
+        stagger: 0.3,
+      });
   }
 });
