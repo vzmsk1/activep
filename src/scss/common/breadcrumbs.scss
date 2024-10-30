@@ -11,6 +11,7 @@
 
   &__txt {
     font-weight: 500;
+    color: $blue;
 
     @media (max-width: 48em) {
       font-size: 3.2rem;

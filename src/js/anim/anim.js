@@ -23,7 +23,7 @@ window.addEventListener('load', function () {
         },
       })
       .to(section, { opacity: 1, translateY: 0 })
-      .to(section.querySelector('.title-wrap__svg'), { width: '49.1rem' }, 0.5)
+      .to(section.querySelector('.title-wrap__svg'), { width: '49.1rem' })
       .to(
         section.querySelectorAll(
           '.title-wrap__title, .section-head .btn , .section-head .controls'
@@ -69,7 +69,7 @@ window.addEventListener('load', function () {
           '--scaleX': 1,
           opacity: 1,
         },
-        1
+        0.5
       )
       .to(
         section.querySelectorAll('.request__btn, .request__txt .char'),
@@ -222,7 +222,7 @@ window.addEventListener('load', function () {
       return () => {};
     });
 
-    document.querySelectorAll('.advantages__item').forEach(item => {
+    document.querySelectorAll('.advantages__slide').forEach(item => {
       gsap
         .timeline({
           scrollTrigger: {
@@ -248,24 +248,20 @@ window.addEventListener('load', function () {
         scrollTrigger: {
           trigger: '.contacts__content',
           once: true,
-          start: 'top 60%',
+          start: 'top 90%',
         },
       })
-      .to(
-        '.contacts__title .char',
-        {
-          opacity: 1,
-          stagger: 0.02,
-        },
-        0.5
-      )
+      .to('.contacts__title .char', {
+        opacity: 1,
+        stagger: 0.02,
+      })
       .to(
         '.contacts__item-content',
         {
           opacity: 1,
           stagger: 0.1,
         },
-        1
+        0.5
       );
 
     gsap
@@ -273,7 +269,7 @@ window.addEventListener('load', function () {
         scrollTrigger: {
           trigger: '.contacts__body',
           once: true,
-          start: 'top center',
+          start: 'top 80%',
         },
       })
       .to('.contacts__body', {
