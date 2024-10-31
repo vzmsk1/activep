@@ -7,17 +7,19 @@ window.addEventListener('load', function () {
     });
   }
 
-  if (document.querySelectorAll('.accordion').length) {
-    document.querySelectorAll('.accordion').forEach(accordion => {
+  if (document.querySelectorAll('[data-accordion]').length) {
+    document.querySelectorAll('[data-accordion]').forEach(accordion => {
       accordion.addEventListener('click', function (e) {
-        if (e.target.closest('.accordion__item._is-active')) {
-          e.target.closest('.accordion__item').classList.remove('_is-active');
-        } else if (e.target.closest('.accordion__item')) {
+        if (e.target.closest('[data-accordion-item]._is-active')) {
+          e.target
+            .closest('[data-accordion-item]')
+            .classList.remove('_is-active');
+        } else if (e.target.closest('[data-accordion-item]')) {
           removeClasses(
-            accordion.querySelectorAll('.accordion__item'),
+            accordion.querySelectorAll('[data-accordion-item]'),
             '_is-active'
           );
-          e.target.closest('.accordion__item').classList.add('_is-active');
+          e.target.closest('[data-accordion-item]').classList.add('_is-active');
         }
       });
     });

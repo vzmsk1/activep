@@ -100,6 +100,26 @@
     }
   }
 
+  &_blue {
+    background-color: $white;
+
+    .btn__icon svg {
+      color: $black;
+    }
+
+    .btn__txt-wrap::after {
+      background-color: $brightBlue;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        .btn__icon svg {
+          color: $white;
+        }
+      }
+    }
+  }
+
   &_white {
     color: $white;
 

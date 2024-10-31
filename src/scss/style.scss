@@ -81,6 +81,7 @@ ymaps canvas {
 @import 'common/field';
 @import 'common/controls';
 @import 'common/breadcrumbs';
+@import 'common/select';
 
 // --------------------------------------------------------------------------
 
@@ -100,3 +101,7 @@ ymaps canvas {
 @import 'sections/services-hero';
 @import 'sections/work';
 @import 'sections/popup-slider';
+@import 'sections/price';
+@import 'sections/suitability';
+@import 'sections/faq';
+@import 'sections/other-services';

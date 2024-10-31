@@ -56,7 +56,8 @@
     @media (max-width: 48em) {
       left: -3rem;
 
-      clip-path: inset(1rem 23rem 0 0);
+      // clip-path: inset(1rem 23rem 0 0);
+      clip-path: inset(0 4rem 0 0);
     }
 
     svg {

@@ -1,3 +1,7 @@
+[data-accordion-item]._is-active [data-accordion-body] {
+  grid-template-rows: 1fr;
+}
+
 .accordion {
   display: flex;
   flex-direction: column;
@@ -143,7 +147,7 @@
     ._is-active & {
       color: $white;
 
-      transform: rotate(45deg);
+      transform: rotate(-45deg);
     }
 
     svg {
@@ -179,7 +183,6 @@
     }
 
     ._is-active & {
-      grid-template-rows: 1fr;
       border-top: 1px solid $gray;
     }
 

@@ -103,7 +103,9 @@ function horizontalLoop(items, config) {
 }
 
 window.addEventListener('load', function () {
-  horizontalLoop(gsap.utils.toArray('.marquee__txt'), {
-    repeat: -1,
-  });
+  if (document.querySelector('.marquee__txt')) {
+    horizontalLoop(gsap.utils.toArray('.marquee__txt'), {
+      repeat: -1,
+    });
+  }
 });

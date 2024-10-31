@@ -12,6 +12,7 @@ import { remToPx } from '../utils/utils';
 const breakpoint = window.matchMedia('(min-width:768px)');
 
 let advantagesSwiper;
+let suitabilitySwiper;
 
 if (document.querySelector('.reviews__slider')) {
   const slider = new Swiper('.reviews__slider', {
@@ -198,11 +199,21 @@ function enableSliderOnResize() {
       spaceBetween: remToPx(4),
     });
   }
+  if (document.querySelector('.suitability__slider')) {
+    suitabilitySwiper = new Swiper('.suitability__slider', {
+      modules: [],
+      speed: 800,
+      loop: true,
+      slidesPerView: 'auto',
+      spaceBetween: remToPx(4),
+    });
+  }
 }
 
 function breakpointChecker() {
   if (breakpoint.matches === true) {
     if (advantagesSwiper !== undefined) advantagesSwiper.destroy(true, true);
+    if (suitabilitySwiper !== undefined) suitabilitySwiper.destroy(true, true);
     return;
   } else if (breakpoint.matches === false) {
     return enableSliderOnResize();

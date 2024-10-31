@@ -47,6 +47,7 @@
     background-color: $white;
 
     @media (max-width: 48em) {
+      justify-content: start;
       height: 14rem;
       border-bottom: 1px solid $gray;
     }
@@ -61,6 +62,8 @@
     opacity: 0;
 
     @media (max-width: 48em) {
+      margin-right: auto;
+
       flex: 0 0 34.6rem;
       width: 34.6rem;
     }
@@ -259,6 +262,10 @@
       transform: translateX(0);
     }
   }
+
+  &__socials {
+    margin-right: 6.2rem;
+  }
 }
 
 .sublist-header {
@@ -380,5 +387,29 @@
         transform: translateY(-50%) rotate(-45deg);
       }
     }
+  }
+}
+
+.socials {
+  display: flex;
+  column-gap: 1.6rem;
+
+  &__item {
+    display: inline-flex;
+  }
+
+  &__inner {
+    width: 6.4rem;
+    height: 6.4rem;
+    border-radius: 50%;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @media (min-width: 48em) {
+    display: none;
   }
 }

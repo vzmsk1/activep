@@ -109,16 +109,38 @@ window.addEventListener('load', function () {
           stagger: 0.3,
         },
         0.5
+      )
+      .to(
+        section.querySelector('.price__form'),
+        { opacity: 1, translateY: 0 },
+        0.5
       );
   });
 
   gsap.to('header', { translateY: 0 });
   gsap.to(
-    '.header__logo-wrap, .header__item, .header__hamburger',
+    '.header__logo-wrap, .header__item, .header__socials, .header__hamburger',
     { opacity: 1, stagger: 0.1 },
     0.5
   );
   gsap.to('.header', { '--scaleX': 1 }, 1);
+
+  if (document.querySelectorAll('.advantages__slide').length) {
+    document.querySelectorAll('.advantages__slide').forEach(item => {
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: item,
+            once: true,
+            start: 'top 70%',
+          },
+        })
+        .to(item.querySelector('.item-advantages__inner'), {
+          '--scaleY': 1,
+          opacity: 1,
+        });
+    });
+  }
 
   if (document.querySelector('.hero')) {
     heroTl.to(
@@ -184,6 +206,7 @@ window.addEventListener('load', function () {
         .timeline({
           scrollTrigger: {
             trigger: '.steps',
+            start: 'top 70%',
             once: true,
           },
         })
@@ -220,21 +243,6 @@ window.addEventListener('load', function () {
           0
         );
       return () => {};
-    });
-
-    document.querySelectorAll('.advantages__slide').forEach(item => {
-      gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: item,
-            once: true,
-            start: 'top 70%',
-          },
-        })
-        .to(item.querySelector('.item-advantages__inner'), {
-          '--scaleY': 1,
-          opacity: 1,
-        });
     });
   } else if (document.querySelector('.contacts')) {
     gsap.to('.contacts__heading, .contacts__group', {
@@ -320,5 +328,173 @@ window.addEventListener('load', function () {
         translateY: 0,
         stagger: 0.3,
       });
+  } else if (document.querySelector('.services-hero')) {
+    gsap.to('.services-hero__breadcrumbs', {
+      opacity: 1,
+    });
+    gsap.to(
+      '.services-hero, .services-hero__image-wrap',
+      {
+        '--scaleX': 1,
+        opacity: 1,
+        stagger: 0.5,
+        '--y': 0,
+        '--opacity': 1,
+      },
+      0
+    );
+    gsap.to(
+      '.services-hero__title, .services-hero__txt, .services-hero__btn',
+      {
+        translateX: 0,
+        translateY: 0,
+        opacity: 1,
+        stagger: 0.4,
+        duration: 0.5,
+      },
+      0.5
+    );
+    gsap.to(
+      '.services-hero',
+      {
+        '--clipPath': 'inset(0% 0% 0% 0%)',
+      },
+      0.8
+    );
+    gsap.to(
+      '.services-hero__image',
+      {
+        opacity: 1,
+        translateY: 0,
+      },
+      0.8
+    );
+
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: '.work',
+          once: true,
+          start: 'top 70%',
+        },
+      })
+      .to('.work', {
+        '--clipPath': 'inset(0% 0% 0% 0%)',
+      });
+
+    if (document.querySelectorAll('.work__item').length) {
+      document.querySelectorAll('.work__item').forEach(item => {
+        gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: item,
+              once: true,
+              start: 'top 70%',
+            },
+          })
+          .to(item, {
+            translateY: 0,
+            opacity: 1,
+          })
+          .to(
+            item.querySelector('.item-work__number'),
+            {
+              opacity: 1,
+              duration: 0.5,
+            },
+            0.5
+          )
+          .to(
+            item,
+            {
+              '--scaleY': 1,
+            },
+            1
+          );
+      });
+    }
+
+    if (document.querySelectorAll('.suitability-card').length) {
+      mm.add('(max-width: 768px)', () => {
+        document
+          .querySelectorAll('.suitability-card, .suitability__btn')
+          .forEach(item => {
+            gsap
+              .timeline({
+                scrollTrigger: {
+                  trigger: item,
+                  once: true,
+                  start: 'top 70%',
+                },
+              })
+              .to(item, {
+                opacity: 1,
+                '--scaleX': 1,
+              });
+          });
+      });
+
+      mm.add('(min-width: 768px)', () => {
+        gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: '.suitability',
+              once: true,
+              start: 'top 70%',
+            },
+          })
+          .to('.suitability-card, .suitability__btn', {
+            opacity: 1,
+            '--scaleX': 1,
+            stagger: 0.3,
+          });
+      });
+    }
+
+    if (document.querySelectorAll('.accordion-faq__item').length) {
+      document.querySelectorAll('.accordion-faq__item').forEach(item => {
+        gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: item,
+              once: true,
+              start: 'top 70%',
+            },
+          })
+          .to(item, {
+            opacity: 1,
+          });
+      });
+    }
+
+    if (document.querySelectorAll('.other-services__item').length) {
+      mm.add('(max-width: 768px)', () => {
+        document.querySelectorAll('.other-services__item').forEach(item => {
+          gsap
+            .timeline({
+              scrollTrigger: {
+                trigger: item,
+                once: true,
+                start: 'top 70%',
+              },
+            })
+            .to(item, {
+              opacity: 1,
+            });
+        });
+      });
+
+      mm.add('(min-width: 768px)', () => {
+        gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: '.other-services',
+              once: true,
+              start: 'top 70%',
+            },
+          })
+          .to('.other-services__item', { opacity: 1, stagger: 0.3 });
+      });
+    }
   }
 });

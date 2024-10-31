@@ -1,0 +1,142 @@
+.faq {
+  @media (min-width: 48em) {
+    padding-top: 5rem;
+    margin-bottom: 17rem;
+  }
+
+  // .faq__container
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10rem;
+
+    @media (max-width: 48em) {
+      row-gap: 5.5rem;
+    }
+  }
+
+  // .faq__head
+
+  &__head {
+  }
+
+  // .faq__accordion
+
+  &__accordion {
+  }
+}
+
+.accordion-faq {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.4rem;
+
+  // .accordion-faq__item
+
+  &__item {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ababab33;
+    border-left: none;
+
+    opacity: 0;
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 0.6rem;
+      height: 100%;
+
+      background-color: $blue;
+
+      @media (max-width: 48em) {
+        width: 0.4rem;
+      }
+    }
+  }
+
+  // .accordion-faq__btn
+
+  &__btn {
+    padding: 2.8rem 2.8rem 2.1rem 2.8rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 4rem;
+
+    font-weight: 500;
+
+    @media (max-width: 48em) {
+      padding: 2.5rem 2.4rem 3.2rem 3rem;
+
+      align-items: flex-start;
+
+      font-size: 3.2rem;
+      line-height: 4rem;
+    }
+
+    &::after {
+      content: '';
+
+      flex: 0 0 3.2rem;
+      width: 3.2rem;
+      height: 3.2rem;
+
+      background: url(@img/icons/cross.svg) center / 3.2rem no-repeat;
+
+      transition: transform 0.3s ease;
+
+      @media (max-width: 48em) {
+        flex: 0 0 4.8rem;
+        width: 4.8rem;
+        height: 4.8rem;
+
+        background: url(@img/icons/cross.svg) center / 4.8rem no-repeat;
+      }
+
+      ._is-active & {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  // .accordion-faq__body
+
+  &__body {
+    display: grid;
+    grid-template-rows: 0fr;
+
+    transition: grid-template-rows 0.3s ease;
+  }
+
+  // .accordion-faq__text-wrap
+
+  &__text-wrap {
+    overflow: hidden;
+  }
+
+  // .accordion-faq__txt
+
+  &__txt {
+    padding: 0 2.8rem 2.8rem 2.8rem;
+
+    max-width: 91.7rem;
+
+    @media (max-width: 48em) {
+      padding: 1rem 3.2rem 3rem 3.2rem;
+
+      max-width: 61.2rem;
+
+      font-size: 3.2rem;
+      line-height: 4rem;
+    }
+  }
+}

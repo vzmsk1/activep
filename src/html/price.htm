@@ -1,0 +1,141 @@
+<section class="price">
+  <div class="price__container container">
+    <div class="price__head section-head">
+      <div class="section-head__title-wrap title-wrap">
+        <div class="title-wrap__svg">
+          <svg><use href="#title-svg"></use></svg>
+        </div>
+        <span class="title-wrap__title title"
+          ><span class="_blue-colored">Стоимость</span> бухгалтерского
+          сопровождения ИП</span
+        >
+      </div>
+    </div>
+    <form action="#" class="price__form">
+      <div class="price__form-wrap">
+        <div class="price__field select-field">
+          <span class="select-field__subtitle txt32">Форма собственности</span>
+          <select
+            data-show-selection
+            name="form[]"
+            class="select-field__select select">
+            <option value="1" selected>ИП</option>
+            <option value="2">ООО</option>
+          </select>
+        </div>
+        <div class="price__field select-field">
+          <span class="select-field__subtitle txt32"
+            >Система налогообложения</span
+          >
+          <select
+            data-show-selection
+            name="form[]"
+            class="select-field__select select">
+            <option value="1" selected>УСН (15%)</option>
+            <option value="2">УСН (6%)</option>
+            <option value="3">ОСН</option>
+          </select>
+        </div>
+        <div class="price__field price__field_large select-field">
+          <span class="select-field__subtitle txt32"
+            >Основной вид деятельности</span
+          >
+          <select
+            data-show-selection
+            name="form[]"
+            class="select-field__select select">
+            <option value="1" selected>Строительство</option>
+            <option value="2">Пункт №2</option>
+            <option value="3">Пункт №3</option>
+          </select>
+        </div>
+        <div class="price__field input-field">
+          <span class="input-field__subtitle txt32">Оборот в месяц~</span>
+          <div data-txt="₽" class="input-field__input-wrap">
+            <input
+              autocomplete="off"
+              type="text"
+              name="form[]"
+              placeholder="0"
+              class="input-field__input _num-only" />
+          </div>
+        </div>
+        <div class="price__field input-field">
+          <span class="input-field__subtitle txt32"
+            >Количество сотрудников</span
+          >
+          <div data-txt="чел" class="input-field__input-wrap">
+            <input
+              autocomplete="off"
+              type="text"
+              name="form[]"
+              placeholder="0"
+              class="input-field__input _num-only" />
+          </div>
+        </div>
+      </div>
+      <div class="price__body">
+        <div class="price__tabs">
+          <button type="button" class="price__tab">
+            <input
+              type="radio"
+              name="option"
+              checked
+              class="price__radio-btn" />
+            <div class="price__tab-txt txt20">3 мес</div>
+          </button>
+          <button type="button" class="price__tab">
+            <input type="radio" name="option" class="price__radio-btn" />
+            <div class="price__tab-txt txt20">6 мес</div>
+          </button>
+          <button type="button" class="price__tab">
+            <input type="radio" name="option" class="price__radio-btn" />
+            <div class="price__tab-txt txt20">9 мес</div>
+          </button>
+          <button type="button" class="price__tab">
+            <input type="radio" name="option" class="price__radio-btn" />
+            <div class="price__tab-txt txt20">1 год</div>
+          </button>
+        </div>
+        <div class="price__content">
+          <div class="price__total total-price">
+            <span class="total-price__value txt70">9 083 ₽</span>
+            <span class="total-price__txt txt16">В месяц</span>
+          </div>
+          <div class="price__text-wrap">
+            <span class="price__subtitle txt24">Полное обслуживание:</span>
+            <p class="price__txt">
+              Бухгалтерский, налоговый и кадровый учёт с расчётом зарплаты
+            </p>
+          </div>
+          <div class="price__fields">
+            <div class="price__field field">
+              <input
+                autocomplete="off"
+                type="text"
+                name="form[]"
+                placeholder="Имя*"
+                class="field__input" />
+            </div>
+            <div class="price__field field">
+              <input
+                autocomplete="off"
+                type="tel"
+                name="form[]"
+                placeholder="Телефон*"
+                class="field__input" />
+            </div>
+          </div>
+          <button class="price__btn btn btn_blue">
+            <span class="btn__txt-wrap"
+              ><span class="btn__txt txt16">Заказать услугу</span></span
+            >
+            <span class="btn__icon">
+              <svg><use href="#arrow-svg"></use></svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
