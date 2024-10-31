@@ -210,6 +210,7 @@
       width: calc(34.5rem + ((100vw - 144rem) / 2));
       height: 100%;
 
+      opacity: 0;
       transform: translateX(calc((100vw - 144rem) / 2));
     }
   }

@@ -18,8 +18,9 @@ if (document.querySelector('.reviews__slider')) {
   const slider = new Swiper('.reviews__slider', {
     modules: [Navigation, Controller, Pagination],
     speed: 800,
-    loop: true,
+    rewind: true,
     spaceBetween: 90,
+    slideToClickedSlide: true,
     navigation: {
       prevEl: '.reviews .controls__btn_prev',
       nextEl: '.reviews .controls__btn_next',
@@ -172,21 +173,6 @@ if (document.querySelector('.docs__slider')) {
     slider.controller.control = popupSlider;
     popupSlider.controller.control = slider;
   }
-}
-
-if (document.querySelector('.popup-slider__slider')) {
-  new Swiper('.popup-slider__slider', {
-    modules: [Navigation],
-    speed: 800,
-    loop: true,
-    autoHeight: true,
-    centeredSlides: true,
-    centeredSlidesBounds: true,
-    // navigation: {
-    //   prevEl: '.docs .controls__btn_prev',
-    //   nextEl: '.docs .controls__btn_next',
-    // },
-  });
 }
 
 function enableSliderOnResize() {
