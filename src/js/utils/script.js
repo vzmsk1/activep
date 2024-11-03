@@ -37,6 +37,14 @@ window.addEventListener('load', function () {
     });
   }
 
+  if (document.querySelector('.blog__filters-btn')) {
+    document
+      .querySelector('.blog__filters-btn')
+      .addEventListener('click', function () {
+        document.documentElement.classList.toggle('_show-filters');
+      });
+  }
+
   function onClickHandler(e) {
     if (
       e.target.closest('.header__item') &&

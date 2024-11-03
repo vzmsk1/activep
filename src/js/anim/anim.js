@@ -496,5 +496,55 @@ window.addEventListener('load', function () {
           .to('.other-services__item', { opacity: 1, stagger: 0.3 });
       });
     }
+  } else if (document.querySelector('.blog')) {
+    gsap.to('.blog__breadcrumbs', {
+      opacity: 1,
+    });
+    gsap.to(
+      '.blog',
+      {
+        '--scaleX': 1,
+        '--clipPath': 'inset(0% 0% 0% 0%)',
+      },
+      0
+    );
+    gsap.to(
+      '.blog__title',
+      {
+        opacity: 1,
+      },
+      0.5
+    );
+
+    gsap.to(
+      '.aside-blog__title .char',
+      { opacity: 1, stagger: 0.02, duration: 0.3 },
+      1.5
+    );
+    gsap.to(
+      '.blog__filters-btn, .blog__filters-row',
+      { opacity: 1, stagger: 0.3 },
+      1.5
+    );
+    gsap.to('.aside-blog__list', { opacity: 1 }, 1.5);
+    gsap.to('.blog', { '--x': 1, '--opacity': 1 }, 1.5);
+
+    if (document.querySelectorAll('.blog__item').length) {
+      setTimeout(() => {
+        document.querySelectorAll('.blog__item').forEach(item => {
+          gsap
+            .timeline({
+              scrollTrigger: {
+                trigger: item,
+                once: true,
+                start: 'top 70%',
+              },
+            })
+            .to(item, {
+              opacity: 1,
+            });
+        });
+      }, 1000);
+    }
   }
 });
