@@ -21,7 +21,7 @@ $gray: #c4c4c4;
 @import 'base/footer';
 
 main {
-  padding-top: 9rem;
+  padding-top: 13rem;
 
   @media (max-width: 48em) {
     padding-top: 14rem;
@@ -106,3 +106,6 @@ ymaps canvas {
 @import 'sections/faq';
 @import 'sections/other-services';
 @import 'sections/blog';
+@import 'sections/blog-chapter-hero';
+@import 'sections/blog-chapter';
+@import 'sections/articles';

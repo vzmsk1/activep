@@ -4,6 +4,10 @@
   --x: 0;
   --opacity: 0;
 
+  @media (min-width: 48em) {
+    margin-bottom: 17rem;
+  }
+
   // .blog__container
 
   &__container {
@@ -462,6 +466,8 @@
     }
 
     @media (max-width: 48em) {
+      padding-bottom: 4rem;
+
       height: 84%;
       width: 58.6rem;
 
