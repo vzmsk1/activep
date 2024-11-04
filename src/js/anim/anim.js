@@ -603,7 +603,7 @@ window.addEventListener('load', function () {
         opacity: 1,
         translateY: 0,
       },
-      0.8
+      0.5
     );
 
     if (document.querySelectorAll('.blog-chapter [data-animate]').length) {
