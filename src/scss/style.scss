@@ -53,6 +53,8 @@ main {
 }
 
 .marker {
+  transform: translate(-50%, -50%);
+
   svg {
     width: 4.6rem;
     height: 6.6rem;

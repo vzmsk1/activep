@@ -1,6 +1,21 @@
 import { removeClasses } from './utils';
+import gsap from 'gsap';
+import { ScrollToPlugin } from 'gsap/all';
+
+gsap.registerPlugin(ScrollToPlugin);
 
 window.addEventListener('load', function () {
+  if (document.querySelectorAll('[data-scroll-to]').length) {
+    document.querySelectorAll('[data-scroll-to]').forEach(item => {
+      item.addEventListener('click', function () {
+        gsap.to(window, {
+          duration: 2,
+          scrollTo: { y: item.dataset.scrollTo, offsetY: 130 },
+        });
+      });
+    });
+  }
+
   if (document.querySelector('.hamburger')) {
     document.querySelector('.hamburger').addEventListener('click', function () {
       document.documentElement.classList.toggle('_show-menu');

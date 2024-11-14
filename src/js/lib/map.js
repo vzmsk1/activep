@@ -45,7 +45,6 @@ async function initMap() {
       {
         coordinates: el.coordinate,
         draggable: false,
-        offset: ['-50%', '-50%'],
       },
       content
     );
