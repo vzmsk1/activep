@@ -18,14 +18,23 @@
   // .blog-chapter__container
 
   &__container {
-    display: grid;
-    grid-template-columns: 1fr 34.5rem;
-    column-gap: 2rem;
+    &:not(&_grid) {
+      @media (min-width: 48em) {
+        .blog-chapter__item {
+          grid-template-columns: 22.3rem 1fr;
+        }
+      }
+    }
+    &_grid {
+      display: grid;
+      grid-template-columns: 1fr 34.5rem;
+      column-gap: 2rem;
 
-    @media (max-width: 48em) {
-      display: flex;
-      flex-direction: column;
-      row-gap: 8rem;
+      @media (max-width: 48em) {
+        display: flex;
+        flex-direction: column;
+        row-gap: 8rem;
+      }
     }
   }
 
