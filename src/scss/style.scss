@@ -37,7 +37,7 @@ main {
 }
 
 .wrapper {
-  overflow: hidden;
+  overflow-x: clip;
 }
 
 ._blue-colored {
