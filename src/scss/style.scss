@@ -52,19 +52,19 @@ main {
   color: $white;
 }
 
-.marker {
-  transform: translate(-50%, -50%);
+// .marker {
+//   transform: translate(-50%, -50%);
 
-  svg {
-    width: 4.6rem;
-    height: 6.6rem;
+//   svg {
+//     width: 4.6rem;
+//     height: 6.6rem;
 
-    @media (max-width: 48em) {
-      width: 7.6rem;
-      height: 11rem;
-    }
-  }
-}
+//     @media (max-width: 48em) {
+//       width: 7.6rem;
+//       height: 11rem;
+//     }
+//   }
+// }
 
 .request:last-child {
   margin-bottom: 0;
@@ -111,3 +111,4 @@ ymaps canvas {
 @import 'sections/blog-chapter-hero';
 @import 'sections/blog-chapter';
 @import 'sections/articles';
+@import 'sections/services-list';

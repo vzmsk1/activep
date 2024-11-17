@@ -31,21 +31,19 @@
 
       position: absolute;
       top: 0;
-      left: 0;
+      left: -24rem;
 
-      width: calc(50% + ((100vw - 144rem) / 2));
-      height: 12.6rem;
+      max-width: 100rem;
+      width: 51.5vw;
+      height: 12.8rem;
 
       background: url(@img/bg/vector2.svg) center / cover;
 
       clip-path: var(--clipPath);
-      transform: translateX(calc(((100vw - 144rem) / -2)));
 
       @media (max-width: 48em) {
         width: 44rem;
         height: 11.2rem;
-
-        transform: translateX(-3rem);
       }
     }
   }
