@@ -21,7 +21,7 @@
     &:not(&_grid) {
       @media (min-width: 48em) {
         .blog-chapter__item {
-          grid-template-columns: 22.3rem 1fr;
+          grid-template-columns: 22.3rem 1fr 34.5rem;
         }
       }
     }

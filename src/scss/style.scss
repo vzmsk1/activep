@@ -52,6 +52,14 @@ main {
   color: $white;
 }
 
+[data-gsap-cly] {
+  --cly: inset(0% 0% 100% 0%);
+}
+
+[data-gsap-fadein] {
+  opacity: 0;
+}
+
 // .marker {
 //   transform: translate(-50%, -50%);
 
@@ -112,3 +120,4 @@ ymaps canvas {
 @import 'sections/blog-chapter';
 @import 'sections/articles';
 @import 'sections/services-list';
+@import 'sections/activities';

@@ -125,6 +125,38 @@ window.addEventListener('load', function () {
   );
   gsap.to('.header', { '--scaleX': 1 }, 1);
 
+  if (document.querySelectorAll('[data-gsap-fadein]').length) {
+    document.querySelectorAll('[data-gsap-fadein]').forEach(item => {
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: item,
+            once: true,
+            start: 'top 70%',
+          },
+        })
+        .to(item, {
+          opacity: 1,
+        });
+    });
+  }
+
+  if (document.querySelectorAll('[data-gsap-cly]').length) {
+    document.querySelectorAll('[data-gsap-cly]').forEach(item => {
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: item,
+            once: true,
+            start: 'top 70%',
+          },
+        })
+        .to(item, {
+          '--cly': 'inset(0% 0% 0% 0%)',
+        });
+    });
+  }
+
   if (document.querySelectorAll('.advantages__slide').length) {
     document.querySelectorAll('.advantages__slide').forEach(item => {
       gsap
