@@ -52,6 +52,10 @@ main {
   color: $white;
 }
 
+.target {
+  font-kerning: none;
+}
+
 [data-gsap-cly] {
   --cly: inset(0% 0% 100% 0%);
 }

@@ -1,11 +1,11 @@
 import gsap from 'gsap';
-import splt from 'spltjs';
+import SplitType from 'split-type';
 import { ScrollTrigger } from 'gsap/all';
 
 gsap.defaults({ duration: 1 });
 gsap.registerPlugin(ScrollTrigger);
 
-splt({});
+const text = new SplitType('.splt');
 
 let mm = gsap.matchMedia();
 
