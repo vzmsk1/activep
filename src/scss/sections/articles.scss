@@ -1,7 +1,9 @@
 .articles {
   .blog-card,
   .btn {
-    opacity: 0;
+    ._js-allowed & {
+      opacity: 0;
+    }
   }
   .title-wrap__svg {
     @media (min-width: 48em) {

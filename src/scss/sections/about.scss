@@ -69,8 +69,10 @@
     row-gap: 3rem;
 
     .about__text {
-      opacity: 0;
-      transform: translateY(30%);
+      ._js-allowed & {
+        opacity: 0;
+        transform: translateY(30%);
+      }
     }
 
     @media (min-width: 48em) {
@@ -106,8 +108,10 @@
   // .about__subtitle
 
   &__subtitle {
-    opacity: 0;
-    transform: translateY(30%);
+    ._js-allowed & {
+      opacity: 0;
+      transform: translateY(30%);
+    }
 
     @media (min-width: 48em) {
       max-width: 74.4rem;
@@ -121,8 +125,10 @@
     flex-direction: column;
     row-gap: 3rem;
 
-    opacity: 0;
-    transform: translateY(30%);
+    ._js-allowed & {
+      opacity: 0;
+      transform: translateY(30%);
+    }
 
     @media (min-width: 48em) {
       padding-top: 1rem;

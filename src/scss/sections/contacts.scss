@@ -2,7 +2,9 @@
   margin-bottom: 0;
 
   .char {
-    opacity: 0;
+    ._js-allowed & {
+      opacity: 0;
+    }
   }
 
   @media (max-width: 48em) {
@@ -11,8 +13,10 @@
 
   &__heading,
   &__group {
-    opacity: 0;
-    transform: translateY(100%);
+    ._js-allowed & {
+      opacity: 0;
+      transform: translateY(100%);
+    }
   }
 
   // .contacts__item-content
@@ -20,7 +24,9 @@
   &__item-content {
     width: 100%;
 
-    opacity: 0;
+    ._js-allowed & {
+      opacity: 0;
+    }
   }
 
   // .contacts__container
@@ -159,8 +165,10 @@
     display: flex;
     flex-direction: column;
 
-    opacity: 0;
-    transform: translateY(10%);
+    ._js-allowed & {
+      opacity: 0;
+      transform: translateY(10%);
+    }
 
     --clipPath: inset(0 100% 0 0);
   }
@@ -220,7 +228,9 @@
 
       background: url(@img/bg/vector.svg) center / contain no-repeat;
 
-      clip-path: var(--clipPath);
+      ._js-allowed & {
+        clip-path: var(--clipPath);
+      }
     }
 
     @media (max-width: 48em) {

@@ -3,6 +3,7 @@ import gsap from 'gsap';
 import { ScrollToPlugin } from 'gsap/all';
 
 gsap.registerPlugin(ScrollToPlugin);
+document.documentElement.classList.add('_js-allowed');
 
 window.addEventListener('load', function () {
   if (document.querySelectorAll('[data-scroll-to]').length) {

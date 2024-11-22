@@ -9,7 +9,9 @@
   }
 
   .pagination {
-    opacity: 0;
+    ._js-allowed & {
+      opacity: 0;
+    }
   }
 }
 
@@ -20,8 +22,10 @@
 
   .btn,
   .controls {
-    opacity: 0;
-    transform: translateY(100%);
+    ._js-allowed & {
+      opacity: 0;
+      transform: translateY(100%);
+    }
   }
 }
 
@@ -38,8 +42,10 @@
 
     display: block;
 
-    opacity: 0;
-    transform: translateY(100%);
+    ._js-allowed & {
+      opacity: 0;
+      transform: translateY(100%);
+    }
   }
 
   // .title-wrap__svg
@@ -49,7 +55,11 @@
     top: 0;
     left: -24rem;
 
-    width: 0;
+    width: 49.1rem;
+
+    ._js-allowed & {
+      width: 0;
+    }
 
     overflow: hidden;
 

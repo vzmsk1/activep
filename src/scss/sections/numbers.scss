@@ -22,8 +22,10 @@
     background-color: $black;
 
     @media (min-width: 48em) {
-      transform: scaleX(var(--scaleX));
       transform-origin: left;
+      ._js-allowed & {
+        transform: scaleX(var(--scaleX));
+      }
     }
   }
 
@@ -72,7 +74,9 @@
   &__item {
     position: relative;
 
-    opacity: 0;
+    ._js-allowed & {
+      opacity: 0;
+    }
 
     @media (min-width: 48em) {
       &:not(:last-child) {
@@ -88,7 +92,10 @@
 
           background-color: $gray;
 
-          transform: translate(100%, -50%) scaleY(var(--scaleY));
+          transform: translate(100%, -50%);
+          ._js-allowed & {
+            transform: translate(100%, -50%) scaleY(var(--scaleY));
+          }
         }
       }
     }
@@ -111,7 +118,9 @@
 
           opacity: 0.6;
 
-          transform: scaleX(var(--scaleX2));
+          ._js-allowed & {
+            transform: scaleX(var(--scaleX2));
+          }
           transform-origin: left;
         }
       }

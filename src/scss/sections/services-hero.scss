@@ -30,7 +30,9 @@
   // .services-hero__breadcrumbs
 
   &__breadcrumbs {
-    opacity: 0;
+    ._js-allowed & {
+      opacity: 0;
+    }
 
     @media (max-width: 48em) {
       display: none;
@@ -74,8 +76,10 @@
 
       background: url(@img/bg/vector.svg) center / contain;
 
-      clip-path: var(--clipPath);
       transform: translateX(calc((100vw - 144rem) / -2));
+      ._js-allowed & {
+        clip-path: var(--clipPath);
+      }
 
       @media (max-width: 48em) {
         bottom: auto;
@@ -103,8 +107,11 @@
 
       background-color: $black;
 
-      transform: translateX(calc((100vw - 144rem) / -2)) scaleX(var(--scaleX));
+      transform: translateX(calc((100vw - 144rem) / -2));
       transform-origin: left;
+      ._js-allowed & {
+        transform: translateX(calc((100vw - 144rem) / -2)) scaleX(var(--scaleX));
+      }
 
       @media (max-width: 48em) {
         left: -3rem;
@@ -112,8 +119,12 @@
         width: 100vw;
         height: 91%;
 
-        opacity: var(--opacity);
-        transform: translateY(var(--y));
+        transform: none;
+
+        ._js-allowed & {
+          opacity: var(--opacity);
+          transform: translateY(var(--y));
+        }
       }
     }
   }
@@ -129,8 +140,10 @@
 
     text-transform: uppercase;
 
-    opacity: 0;
-    transform: translateX(30%);
+    ._js-allowed & {
+      opacity: 0;
+      transform: translateX(30%);
+    }
 
     @media (min-width: 48em) {
       row-gap: 1.5rem;
@@ -156,8 +169,10 @@
   &__txt {
     margin-bottom: 5rem;
 
-    opacity: 0;
-    transform: translateY(30%);
+    ._js-allowed & {
+      opacity: 0;
+      transform: translateY(30%);
+    }
 
     @media (max-width: 48em) {
       color: $white;
@@ -178,8 +193,10 @@
   &__btn {
     margin-bottom: 7.2rem;
 
-    opacity: 0;
-    transform: translateY(30%);
+    ._js-allowed & {
+      opacity: 0;
+      transform: translateY(30%);
+    }
 
     @media (min-width: 48em) {
       margin-right: 22rem;
@@ -210,8 +227,10 @@
       width: calc(34.5rem + ((100vw - 144rem) / 2));
       height: 100%;
 
-      opacity: 0;
       transform: translateX(calc((100vw - 144rem) / 2));
+      ._js-allowed & {
+        opacity: 0;
+      }
     }
   }
 
@@ -223,8 +242,10 @@
     object-fit: cover;
 
     @media (max-width: 48em) {
-      opacity: 0;
-      transform: translateY(30%);
+      ._js-allowed & {
+        opacity: 0;
+        transform: translateY(30%);
+      }
     }
   }
 }

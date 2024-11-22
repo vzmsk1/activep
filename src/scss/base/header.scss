@@ -10,7 +10,9 @@
 
   background-color: $white;
 
-  transform: translateY(-100%);
+  ._js-allowed & {
+    transform: translateY(-100%);
+  }
 
   --scaleX: 0;
 
@@ -28,8 +30,10 @@
 
       background-color: $gray;
 
-      transform: scaleX(var(--scaleX));
       transform-origin: left;
+      ._js-allowed & {
+        transform: scaleX(var(--scaleX));
+      }
     }
   }
 
@@ -95,7 +99,9 @@
     flex: 0 0 26.1rem;
     width: 26.1rem;
 
-    opacity: 0;
+    ._js-allowed & {
+      opacity: 0;
+    }
 
     @media (max-width: 48em) {
       margin-right: auto;
@@ -148,7 +154,9 @@
     align-items: center;
     height: 100%;
 
-    opacity: 0;
+    ._js-allowed & {
+      opacity: 0;
+    }
 
     &:nth-child(-n + 9) {
       .header__number {
@@ -256,7 +264,9 @@
   // .header__hamburger
 
   &__hamburger {
-    opacity: 0;
+    ._js-allowed & {
+      opacity: 0;
+    }
   }
 
   &__menu,

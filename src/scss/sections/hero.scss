@@ -24,9 +24,10 @@
   // .hero__title-txt
 
   &__title-txt {
-    margin-top: 3%;
-
-    opacity: 0;
+    ._js-allowed & {
+      margin-top: 3%;
+      opacity: 0;
+    }
   }
 
   // .hero__title
@@ -68,7 +69,6 @@
         @media (min-width: 48em) {
           justify-content: flex-end;
           column-gap: 4rem;
-
           transform: translateX(20rem);
         }
       }
@@ -84,8 +84,10 @@
 
     line-height: 147%;
 
-    opacity: 0;
-    transform: translateY(50%);
+    ._js-allowed & {
+      opacity: 0;
+      transform: translateY(50%);
+    }
 
     @media (min-width: 48em) {
       margin-top: auto;
@@ -101,8 +103,10 @@
   // .hero__btn
 
   &__btn {
-    opacity: 0;
-    transform: translateY(100%);
+    ._js-allowed & {
+      opacity: 0;
+      transform: translateY(100%);
+    }
 
     @media (min-width: 48em) {
       align-self: flex-start;

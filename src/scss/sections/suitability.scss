@@ -70,7 +70,9 @@
     margin-top: auto;
     margin-right: auto;
 
-    opacity: 0;
+    ._js-allowed & {
+      opacity: 0;
+    }
 
     @media (min-width: 48em) {
       transform: translateY(-1rem);
@@ -91,7 +93,9 @@
 }
 
 .suitability-card {
-  opacity: 0;
+  ._js-allowed & {
+    opacity: 0;
+  }
 
   --scaleX: 0;
 
@@ -142,8 +146,10 @@
 
       background-color: $black;
 
-      transform: scaleX(var(--scaleX));
       transform-origin: left;
+      ._js-allowed & {
+        transform: scaleX(var(--scaleX));
+      }
     }
 
     @media (max-width: 48em) {

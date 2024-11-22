@@ -36,7 +36,9 @@
   // .reviews__slider
 
   &__slider {
-    opacity: 0;
+    ._js-allowed & {
+      opacity: 0;
+    }
 
     &.swiper {
       width: 100%;

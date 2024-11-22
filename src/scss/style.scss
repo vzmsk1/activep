@@ -60,8 +60,10 @@ main {
   --cly: inset(0% 0% 100% 0%);
 }
 
-[data-gsap-fadein] {
-  opacity: 0;
+._js-allowed {
+  [data-gsap-fadein] {
+    opacity: 0;
+  }
 }
 
 // .marker {

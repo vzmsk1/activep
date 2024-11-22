@@ -7,8 +7,10 @@
   &__title,
   &__txt,
   &__btn {
-    opacity: 0;
-    transform: translateY(40%);
+    ._js-allowed & {
+      opacity: 0;
+      transform: translateY(40%);
+    }
   }
 
   @media (max-width: 48em) {

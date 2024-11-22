@@ -33,7 +33,9 @@
   &__breadcrumbs {
     padding-top: 5rem;
 
-    opacity: 0;
+    ._js-allowed & {
+      opacity: 0;
+    }
 
     @media (max-width: 48em) {
       display: none;
@@ -66,8 +68,11 @@
 
       background-color: $black;
 
-      transform: scaleX(var(--scaleX));
       transform-origin: left;
+
+      ._js-allowed & {
+        transform: scaleX(var(--scaleX));
+      }
 
       @media (max-width: 48em) {
         top: auto;
@@ -105,7 +110,9 @@
     text-transform: uppercase;
     color: $white;
 
-    opacity: 0;
+    ._js-allowed & {
+      opacity: 0;
+    }
 
     @media (max-width: 48em) {
       display: flex;
@@ -135,8 +142,11 @@
 
       background: url(@img/bg/vector3.svg) center / cover no-repeat;
 
-      clip-path: var(--clipPath);
       transform: translate(21.5rem, -6.5rem) rotate(90deg);
+
+      ._js-allowed & {
+        clip-path: var(--clipPath);
+      }
 
       @media (max-width: 48em) {
         top: 1rem;
@@ -163,8 +173,11 @@
 
         background: url(@img/bg/vector3.svg) center / contain no-repeat;
 
-        clip-path: var(--clipPath);
         transform: translate(-54rem, -50%);
+
+        ._js-allowed & {
+          clip-path: var(--clipPath);
+        }
       }
     }
   }
@@ -219,7 +232,9 @@
 
     background-color: $black;
 
-    opacity: 0;
+    ._js-allowed & {
+      opacity: 0;
+    }
 
     svg {
       width: 3.2rem;
@@ -255,7 +270,9 @@
     flex-wrap: wrap;
     gap: 2rem;
 
-    opacity: 0;
+    ._js-allowed & {
+      opacity: 0;
+    }
 
     @media (min-width: 48em) {
       display: none;
@@ -286,13 +303,17 @@
   // .blog__item
 
   &__item {
-    opacity: 0;
+    ._js-allowed & {
+      opacity: 0;
+    }
   }
 
   // .blog__banner
 
   &__banner {
-    opacity: 0;
+    ._js-allowed & {
+      opacity: 0;
+    }
   }
 
   // .blog__filters
@@ -450,7 +471,9 @@
     font-weight: 500;
 
     .char {
-      opacity: 0;
+      ._js-allowed & {
+        opacity: 0;
+      }
     }
   }
 
@@ -462,7 +485,9 @@
     row-gap: 2rem;
 
     @media (min-width: 48em) {
-      opacity: 0;
+      ._js-allowed & {
+        opacity: 0;
+      }
     }
 
     @media (max-width: 48em) {
@@ -576,7 +601,9 @@
   &__field-wrap {
     position: relative;
 
-    opacity: var(--opacity);
+    ._js-allowed & {
+      opacity: var(--opacity);
+    }
 
     &::after {
       content: '';
@@ -590,8 +617,11 @@
 
       background-color: $gray;
 
-      transform: scaleX(var(--x));
       transform-origin: left;
+
+      ._js-allowed & {
+        transform: scaleX(var(--x));
+      }
     }
 
     input,

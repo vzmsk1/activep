@@ -31,7 +31,9 @@
 
       background: url(@img/bg/vector2.svg) center / cover no-repeat;
 
-      clip-path: var(--cly);
+      ._js-allowed & {
+        clip-path: var(--cly);
+      }
 
       @media (max-width: 48em) {
         top: 2rem;

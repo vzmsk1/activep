@@ -39,7 +39,9 @@
 
       background: url(@img/bg/vector2.svg) center / cover;
 
-      clip-path: var(--clipPath);
+      ._js-allowed & {
+        clip-path: var(--clipPath);
+      }
 
       @media (max-width: 48em) {
         width: 44rem;
@@ -67,8 +69,10 @@
   // .work__item
 
   &__item {
-    opacity: 0;
-    transform: translateY(30%);
+    ._js-allowed & {
+      opacity: 0;
+      transform: translateY(30%);
+    }
   }
 }
 
@@ -216,8 +220,10 @@
 
     background-color: $black;
 
-    opacity: 0;
     transform: translate(-50%, -50%);
+    ._js-allowed & {
+      opacity: 0;
+    }
 
     @media (max-width: 48em) {
       top: 31.2rem;
@@ -260,7 +266,10 @@
 
       background-color: $blue;
 
-      transform: translate(-50%, 0) scaleY(var(--scaleY));
+      transform: translate(-50%, 0);
+      ._js-allowed & {
+        transform: translate(-50%, 0) scaleY(var(--scaleY));
+      }
     }
 
     &::after {

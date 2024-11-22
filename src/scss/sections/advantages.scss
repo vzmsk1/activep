@@ -88,9 +88,11 @@
     flex-direction: column;
     height: 100%;
 
-    opacity: 0;
-
     --scaleY: 0;
+
+    ._js-allowed & {
+      opacity: 0;
+    }
 
     &::after {
       content: '';
@@ -104,7 +106,13 @@
 
       background-color: $gray;
 
-      transform: scaleY(var(--scaleY));
+      ._js-allowed & {
+        transform: scaleY(var(--scaleY));
+      }
+
+      ._js-allowed & {
+        transform: none;
+      }
     }
 
     @media (max-width: 48em) {

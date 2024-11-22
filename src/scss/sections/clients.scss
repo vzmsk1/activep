@@ -83,7 +83,9 @@
     height: 29.6rem;
     border: 1px solid $gray;
 
-    opacity: 0;
+    ._js-allowed & {
+      opacity: 0;
+    }
 
     transition: border 0.3s ease;
 
