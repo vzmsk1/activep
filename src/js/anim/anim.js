@@ -565,25 +565,6 @@ window.addEventListener('load', function () {
       });
     }
   } else if (document.querySelector('.blog')) {
-    gsap.to('.blog__breadcrumbs', {
-      opacity: 1,
-    });
-    gsap.to(
-      '.blog',
-      {
-        '--scaleX': 1,
-        '--clipPath': 'inset(0% 0% 0% 0%)',
-      },
-      0
-    );
-    gsap.to(
-      '.blog__title',
-      {
-        opacity: 1,
-      },
-      0.5
-    );
-
     gsap.to(
       '.aside-blog__title .char',
       { opacity: 1, stagger: 0.02, duration: 0.3 },
@@ -614,6 +595,25 @@ window.addEventListener('load', function () {
         });
       }, 1000);
     }
+  } else if (document.querySelector('.head-blog')) {
+    gsap.to('.head-blog__breadcrumbs', {
+      opacity: 1,
+    });
+    gsap.to(
+      '.head-blog',
+      {
+        '--scaleX': 1,
+        '--clipPath': 'inset(0% 0% 0% 0%)',
+      },
+      0
+    );
+    gsap.to(
+      '.head-blog__title',
+      {
+        opacity: 1,
+      },
+      0.5
+    );
   } else if (document.querySelector('.blog-chapter-hero')) {
     gsap.to(
       '.blog-chapter-hero__breadcrumbs',

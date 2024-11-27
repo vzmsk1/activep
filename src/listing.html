@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/_head.htm',{ "title":"Листинг" })
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="main">
+        <section class="listing__head head-blog container">
+          <nav class="head-blog__breadcrumbs breadcrumbs">
+            <a href="#" class="breadcrumbs__txt txt16">Главная</a>
+            <span class="breadcrumbs__txt txt16">Условия и цены</span>
+          </nav>
+          <div class="head-blog__title-wrap">
+            <span class="head-blog__title txt70"
+              ><span class="_blue-colored">Цены </span>на <span class="_white-colored _white-colored_mobile">бухгалтерские</span
+            >
+              <span class="_white-colored _white-colored_desk">услуги</span
+            >
+          </div>
+        </section>
+        @@include('html/listing.htm',{}) @@include('html/request.htm',{})
+      </main>
+
+      @@include('html/_footer.htm',{})
+    </div>
+
+    @@include('html/_js.htm',{}) @@include('html/_svg.htm',{})
+  </body>
+</html>
