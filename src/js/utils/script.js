@@ -6,6 +6,21 @@ gsap.registerPlugin(ScrollToPlugin);
 document.documentElement.classList.add('_js-allowed');
 
 window.addEventListener('load', function () {
+  if (document.querySelector('.services-hero__title span')) {
+    const charLength = document
+      .querySelector('.services-hero__title > span')
+      .innerText.trim().length;
+    const charLength2 = document
+      .querySelector('.services-hero__title > span:last-child')
+      .innerText.trim().length;
+
+    if (charLength <= 10 && charLength2 < 15) {
+      document.querySelector('.services-hero__title').classList.add('_b');
+    } else if (charLength <= 7 && charLength2 < 15) {
+      document.querySelector('.services-hero__title').classList.add('_c');
+    }
+  }
+
   if (document.querySelectorAll('[data-scroll-to]').length) {
     document.querySelectorAll('[data-scroll-to]').forEach(item => {
       item.addEventListener('click', function () {

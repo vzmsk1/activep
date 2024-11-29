@@ -149,6 +149,24 @@
       row-gap: 1.5rem;
       width: 96%;
 
+      &._b {
+        > span:first-child {
+          padding-left: 9.4rem;
+        }
+        > span:nth-child(2) {
+          padding-right: 23.6rem;
+        }
+      }
+
+      &._c {
+        > span:first-child {
+          padding-left: 24.1rem;
+        }
+        > span:nth-child(2) {
+          padding-right: 17.9rem;
+        }
+      }
+
       > span:nth-child(2) {
         margin-left: auto;
       }

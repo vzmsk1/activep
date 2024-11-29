@@ -210,6 +210,27 @@ window.addEventListener('load', function () {
     });
   }
 
+  if (document.querySelector('.head-blog')) {
+    gsap.to('.head-blog__breadcrumbs', {
+      opacity: 1,
+    });
+    gsap.to(
+      '.head-blog',
+      {
+        '--scaleX': 1,
+        '--clipPath': 'inset(0% 0% 0% 0%)',
+      },
+      0
+    );
+    gsap.to(
+      '.head-blog__title',
+      {
+        opacity: 1,
+      },
+      0.5
+    );
+  }
+
   if (document.querySelector('.hero')) {
     heroTl.to(
       '.hero__title-txt',
@@ -595,25 +616,6 @@ window.addEventListener('load', function () {
         });
       }, 1000);
     }
-  } else if (document.querySelector('.head-blog')) {
-    gsap.to('.head-blog__breadcrumbs', {
-      opacity: 1,
-    });
-    gsap.to(
-      '.head-blog',
-      {
-        '--scaleX': 1,
-        '--clipPath': 'inset(0% 0% 0% 0%)',
-      },
-      0
-    );
-    gsap.to(
-      '.head-blog__title',
-      {
-        opacity: 1,
-      },
-      0.5
-    );
   } else if (document.querySelector('.blog-chapter-hero')) {
     gsap.to(
       '.blog-chapter-hero__breadcrumbs',

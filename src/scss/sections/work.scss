@@ -114,6 +114,10 @@
     height: 15.8rem;
     grid-row: 1/2;
 
+    @media (min-width: 48em) {
+      align-self: center;
+    }
+
     @media (max-width: 48em) {
       height: 28rem;
     }
