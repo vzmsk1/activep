@@ -126,7 +126,7 @@ if (document.querySelector('.docs__slider')) {
     },
     breakpoints: {
       768: {
-        slidesPerView: 4,
+        slidesPerView: 3,
         spaceBetween: remToPx(15.4),
       },
     },

@@ -141,6 +141,22 @@ window.addEventListener('load', function () {
     });
   }
 
+  if (document.querySelectorAll('[data-gsap-clx]').length) {
+    document.querySelectorAll('[data-gsap-clx]').forEach(item => {
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: item,
+            once: true,
+            start: 'top 70%',
+          },
+        })
+        .to(item, {
+          '--clx': 'inset(0% 0% 0% 0%)',
+        });
+    });
+  }
+
   if (document.querySelectorAll('[data-gsap-cly]').length) {
     document.querySelectorAll('[data-gsap-cly]').forEach(item => {
       gsap
