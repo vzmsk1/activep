@@ -6,6 +6,19 @@ gsap.registerPlugin(ScrollToPlugin);
 document.documentElement.classList.add('_js-allowed');
 
 window.addEventListener('load', function () {
+  const listingCards = document.querySelectorAll('.listing-chapter__card');
+
+  if (listingCards.length && document.querySelector('.listing-chapter')) {
+    if (
+      (listingCards.length % 2 === 0 &&
+        listingCards.length > 3 &&
+        listingCards.length <= 5) ||
+      listingCards.length === 1
+    ) {
+      document.querySelector('.listing-chapter').classList.add('_even');
+    }
+  }
+
   if (document.querySelector('.services-hero__title span')) {
     const charLength = document
       .querySelector('.services-hero__title > span')

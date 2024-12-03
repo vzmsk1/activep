@@ -64,6 +64,10 @@ main {
   [data-gsap-fadein] {
     opacity: 0;
   }
+  [data-gsap-y] {
+    opacity: 0;
+    transform: translateY(30%);
+  }
 }
 
 // .marker {
@@ -129,3 +133,5 @@ ymaps canvas {
 @import 'sections/activities';
 @import 'sections/listing';
 @import 'sections/error-page';
+@import 'sections/listing-chapter-hero';
+@import 'sections/listing-chapter';
