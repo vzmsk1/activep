@@ -153,7 +153,7 @@ window.addEventListener('load', function () {
         })
         .to(item, {
           opacity: 1,
-          translateY: 0
+          translateY: 0,
         });
     });
   }
@@ -262,6 +262,52 @@ window.addEventListener('load', function () {
       },
       0.5
     );
+  }
+
+  if (document.querySelectorAll('.other-services__item').length) {
+    mm.add('(max-width: 768px)', () => {
+      document.querySelectorAll('.other-services__item').forEach(item => {
+        gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: item,
+              once: true,
+              start: 'top 70%',
+            },
+          })
+          .to(item, {
+            opacity: 1,
+          });
+      });
+    });
+
+    mm.add('(min-width: 768px)', () => {
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: '.other-services',
+            once: true,
+            start: 'top 70%',
+          },
+        })
+        .to('.other-services__item', { opacity: 1, stagger: 0.3 });
+    });
+  }
+
+  if (document.querySelectorAll('.accordion-faq__item').length) {
+    document.querySelectorAll('.accordion-faq__item').forEach(item => {
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: item,
+            once: true,
+            start: 'top 70%',
+          },
+        })
+        .to(item, {
+          opacity: 1,
+        });
+    });
   }
 
   if (document.querySelector('.hero')) {
@@ -570,52 +616,6 @@ window.addEventListener('load', function () {
             '--scaleX': 1,
             stagger: 0.3,
           });
-      });
-    }
-
-    if (document.querySelectorAll('.accordion-faq__item').length) {
-      document.querySelectorAll('.accordion-faq__item').forEach(item => {
-        gsap
-          .timeline({
-            scrollTrigger: {
-              trigger: item,
-              once: true,
-              start: 'top 70%',
-            },
-          })
-          .to(item, {
-            opacity: 1,
-          });
-      });
-    }
-
-    if (document.querySelectorAll('.other-services__item').length) {
-      mm.add('(max-width: 768px)', () => {
-        document.querySelectorAll('.other-services__item').forEach(item => {
-          gsap
-            .timeline({
-              scrollTrigger: {
-                trigger: item,
-                once: true,
-                start: 'top 70%',
-              },
-            })
-            .to(item, {
-              opacity: 1,
-            });
-        });
-      });
-
-      mm.add('(min-width: 768px)', () => {
-        gsap
-          .timeline({
-            scrollTrigger: {
-              trigger: '.other-services',
-              once: true,
-              start: 'top 70%',
-            },
-          })
-          .to('.other-services__item', { opacity: 1, stagger: 0.3 });
       });
     }
   } else if (document.querySelector('.blog')) {
