@@ -127,13 +127,16 @@
 
   background-color: $black;
 
+  .btn {
+    border: 1px solid $white;
+  }
+
   @media (max-width: 48em) {
     padding: 3.2rem;
     padding-bottom: 5rem;
 
     .btn {
       width: auto;
-      border: 1px solid $white;
 
       .btn__txt-wrap {
         min-width: 31rem;
