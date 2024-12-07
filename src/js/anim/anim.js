@@ -10,6 +10,8 @@ const text = new SplitType('.splt');
 let mm = gsap.matchMedia();
 
 window.addEventListener('load', function () {
+  document.documentElement.classList.add('_page-loaded');
+
   const heroTl = gsap.timeline();
   const numbersTl = gsap.timeline();
 

@@ -126,6 +126,10 @@
   &__nav {
     height: 100%;
 
+    &:not(._page-loaded &) {
+      display: none;
+    }
+
     @media (min-width: 48em) {
       grid-column: 3/4;
       // margin-right: auto;

@@ -7,6 +7,15 @@ export const markersCollection = [
 async function initMap() {
   await ymaps3.ready;
 
+  const coords = document
+    .getElementById('map')
+    .dataset.coordinates.trim()
+    .split(',');
+  const center = document
+    .getElementById('map')
+    .dataset.center.trim()
+    .split(',');
+
   const {
     YMap,
     YMapDefaultSchemeLayer,
@@ -16,10 +25,11 @@ async function initMap() {
   } = ymaps3;
   const map = new YMap(document.getElementById('map'), {
     location: {
-      center:
-        window.innerWidth <= 768
-          ? [37.8830065, 55.710063069038036]
-          : [37.893506821444205, 55.707114994453676],
+      // center:
+      //   window.innerWidth <= 768
+      //     ? [37.912987097900384, 55.723855248468425]
+      //     : [37.91702114025878, 55.72419433840608],
+      center: [center[0], center[1]],
       zoom: 15,
     },
     behaviors: ['default', 'drag', 'scrollZoom', 'multiTouch'],
@@ -27,6 +37,8 @@ async function initMap() {
 
   map.addChild(new YMapDefaultSchemeLayer());
   map.addChild(new YMapDefaultFeaturesLayer({ zIndex: 1800 }));
+
+  console.log(document.getElementById('map').dataset.coordinates);
 
   markersCollection.forEach(el => {
     let content = document.createElement('div');
@@ -52,7 +64,7 @@ async function initMap() {
     content.style.left = window.innerWidth <= 768 ? '-19px' : '-23.5px'; // влево - на половину ширины
     const marker = new YMapMarker(
       {
-        coordinates: el.coordinate,
+        coordinates: [coords[0], coords[1]],
         draggable: false,
       },
       content
