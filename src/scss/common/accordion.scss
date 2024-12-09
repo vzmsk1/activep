@@ -6,9 +6,6 @@
   display: flex;
   flex-direction: column;
 
-  --scaleX: 0;
-  --opacity: 0;
-
   // .accordion__item
 
   &__item {
@@ -75,16 +72,6 @@
       background-color: $white;
 
       transform-origin: left;
-      ._js-allowed & {
-        opacity: var(--opacity);
-        transform: scaleX(var(--scaleX));
-      }
-
-      &:not(._js-allowed &) {
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-      }
 
       transition: background-color 0.3s ease;
 
@@ -111,10 +98,6 @@
     color: #c4c4c4;
     opacity: 0.6;
 
-    ._js-allowed & {
-      transform: translateY(100%);
-    }
-
     transition: color 0.3s ease;
 
     ._is-active & {
@@ -136,12 +119,6 @@
 
     transition: color 0.3s ease;
 
-    .char {
-      ._js-allowed & {
-        opacity: 0;
-      }
-    }
-
     ._is-active & {
       color: $white;
     }
@@ -151,10 +128,6 @@
 
   &__icon {
     display: inline-flex;
-
-    ._js-allowed & {
-      opacity: 0;
-    }
 
     transition: transform 0.3s ease, color 0.3s ease;
 

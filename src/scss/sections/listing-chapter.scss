@@ -66,11 +66,18 @@
 
   &__title {
     margin-bottom: 2.4rem;
-    padding: 4rem 1.6rem;
+    padding: 0 1.6rem;
+
+    display: inline-flex;
+    align-items: center;
 
     background-color: $black;
 
     color: $white;
+
+    @media (min-width: 48em) {
+      height: 11rem;
+    }
 
     @media (max-width: 48em) {
       margin-bottom: 4.8rem;

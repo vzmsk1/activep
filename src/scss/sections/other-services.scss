@@ -70,10 +70,6 @@
   // .other-services__item
 
   &__item {
-    ._js-allowed & {
-      opacity: 0;
-    }
-
     @media (max-width: 48em) {
       align-self: center;
     }

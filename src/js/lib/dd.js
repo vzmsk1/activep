@@ -77,15 +77,17 @@ DynamicAdapt.prototype.mediaHandler = function (matchMedia, оbjects) {
 };
 DynamicAdapt.prototype.moveTo = function (place, element, destination) {
   element.classList.add(this.daClassname);
-  if (place === 'last' || place >= destination.children.length) {
-    destination.insertAdjacentElement('beforeend', element);
-    return;
+  if (destination) {
+    if (place === 'last' || place >= destination.children.length) {
+      destination.insertAdjacentElement('beforeend', element);
+      return;
+    }
+    if (place === 'first') {
+      destination.insertAdjacentElement('afterbegin', element);
+      return;
+    }
+    destination.children[place].insertAdjacentElement('beforebegin', element);
   }
-  if (place === 'first') {
-    destination.insertAdjacentElement('afterbegin', element);
-    return;
-  }
-  destination.children[place].insertAdjacentElement('beforebegin', element);
 };
 DynamicAdapt.prototype.moveBack = function (parent, element, index) {
   element.classList.remove(this.daClassname);

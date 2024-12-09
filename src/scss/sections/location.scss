@@ -3,11 +3,6 @@
 
   margin-bottom: 0;
 
-  ._js-allowed & {
-    transform: translateY(20%);
-    opacity: 0;
-  }
-
   @media (min-width: 48em) {
     min-height: 88.1rem;
 
@@ -15,9 +10,6 @@
       left: -5.5rem;
 
       width: 49.1rem;
-      ._js-allowed & {
-        width: 0;
-      }
 
       overflow: hidden;
 

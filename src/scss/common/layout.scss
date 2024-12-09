@@ -7,26 +7,12 @@
     @media (max-width: 48em) {
     }
   }
-
-  .pagination {
-    ._js-allowed & {
-      opacity: 0;
-    }
-  }
 }
 
 .section-head {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-
-  .btn,
-  .controls {
-    ._js-allowed & {
-      opacity: 0;
-      transform: translateY(100%);
-    }
-  }
 }
 
 .title-wrap {
@@ -41,11 +27,6 @@
     z-index: 2;
 
     display: block;
-
-    ._js-allowed & {
-      opacity: 0;
-      transform: translateY(100%);
-    }
   }
 
   // .title-wrap__svg
@@ -56,10 +37,6 @@
     left: -24rem;
 
     width: 49.1rem;
-
-    ._js-allowed & {
-      width: 0;
-    }
 
     overflow: hidden;
 

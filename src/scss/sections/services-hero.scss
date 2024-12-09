@@ -149,12 +149,33 @@
       row-gap: 1.5rem;
       width: 96%;
 
+      span._white-colored {
+        text-align: right;
+
+        transform: translateX(-49rem);
+      }
+
+      &._a {
+        > span:last-child {
+          transform: translateX(-11rem);
+        }
+      }
+
+      &._d {
+        > span:first-child {
+          text-align: left;
+
+          transform: none;
+        }
+      }
+
       &._b {
         > span:first-child {
-          padding-left: 9.4rem;
+          // padding-left: 9.4rem;
         }
         > span:nth-child(2) {
-          padding-right: 23.6rem;
+          // padding-right: 23.6rem;
+          transform: translateX(-24rem);
         }
       }
 

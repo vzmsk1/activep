@@ -1,10 +1,4 @@
 .articles {
-  .blog-card,
-  .btn {
-    ._js-allowed & {
-      opacity: 0;
-    }
-  }
   .title-wrap__svg {
     @media (min-width: 48em) {
       top: 2rem;

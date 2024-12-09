@@ -11,15 +11,8 @@
   .field {
     --scaleX: 0;
 
-    ._js-allowed & {
-      opacity: 0;
-    }
-
     &__input {
       transform-origin: left;
-      ._js-allowed & {
-        transform: scaleX(var(--scaleX));
-      }
     }
   }
 
@@ -39,10 +32,6 @@
     margin-bottom: 12rem;
     padding: 5rem 0;
 
-    ._js-allowed & {
-      opacity: 0;
-    }
-
     --width: 0;
 
     @media (max-width: 48em) {
@@ -59,10 +48,6 @@
 
       height: 1px;
       width: 100%;
-
-      ._js-allowed & {
-        width: var(--width);
-      }
 
       background-image: linear-gradient(
         90deg,
@@ -131,21 +116,12 @@
   // .request__btn
 
   &__btn {
-    ._js-allowed & {
-      opacity: 0;
-    }
   }
 
   // .request__txt
 
   &__txt {
     max-width: 39.6rem;
-
-    .char {
-      ._js-allowed & {
-        opacity: 0;
-      }
-    }
 
     @media (max-width: 48em) {
       display: none;
