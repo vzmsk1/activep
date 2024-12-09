@@ -1,10 +1,5 @@
 .blog-chapter {
   margin-bottom: 13.5rem;
-  [data-animate] {
-    ._js-allowed & {
-      opacity: 0;
-    }
-  }
 
   @media (min-width: 48em) {
     margin-bottom: 15.5rem;
