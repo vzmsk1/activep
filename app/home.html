@@ -536,7 +536,7 @@
 							</div>
 						</div>
 						<div class="request__group">
-							<button class="request__btn btn btn_white">
+							<button data-modal="request-sent-modal" class="request__btn btn btn_white">
 								<span class="btn__txt-wrap"><span class="btn__txt txt16">Оставить заявку</span></span>
 								<span class="btn__icon">
 									<svg>
@@ -1050,6 +1050,30 @@
 				</div>
 			</div>
 		</footer>
+		<div id="request-sent-modal" class="modal">
+			<div class="modal__container container modal-content">
+				<div class="modal__body modal-body">
+					<span class="modal__title title">
+						Заявка
+						<span class="_blue-colored">отправлена</span>
+					</span>
+					<p class="modal__text txt20">Заявка отправлена, мы свяжемся с вами</p>
+					<a href="/" class="modal__btn btn">
+						<span class="btn__txt-wrap"><span class="btn__txt txt16">На главную</span></span>
+						<span class="btn__icon">
+							<svg>
+								<use href="#arrow-svg"></use>
+							</svg>
+						</span>
+					</a>
+					<button class="modal__close-btn close-modal-btn">
+						<svg>
+							<use href="#cross-svg"></use>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</div>
 
 	</div>
 

@@ -27,25 +27,21 @@ window.addEventListener('load', function () {
       .querySelector('.services-hero__title > span:last-child')
       .innerText.trim().length;
 
-    console.log(
-      document.querySelector('.services-hero__title > span:last-child')
-        .innerText
-    );
+    if (charLength === 12 && charLength2 === 5) {
+      document.querySelector('.services-hero__title').classList.add('_e');
+    } else if (charLength === 7 && charLength2 === 10) {
+      document.querySelector('.services-hero__title').classList.add('_f');
+    } else {
+      if (charLength <= 7) {
+        document.querySelector('.services-hero__title').classList.add('_d');
+      }
 
-    if (charLength <= 7) {
-      document.querySelector('.services-hero__title').classList.add('_d');
+      if (charLength2 < 10) {
+        document.querySelector('.services-hero__title').classList.add('_b');
+      } else if (charLength2 === 10) {
+        document.querySelector('.services-hero__title').classList.add('_a');
+      }
     }
-
-    if (charLength2 < 10) {
-      document.querySelector('.services-hero__title').classList.add('_b');
-    } else if (charLength2 === 10) {
-      document.querySelector('.services-hero__title').classList.add('_a');
-    }
-    // if (charLength <= 10 && charLength2 < 15) {
-    //   document.querySelector('.services-hero__title').classList.add('_b');
-    // } else if (charLength <= 7 && charLength2 < 15) {
-    //   document.querySelector('.services-hero__title').classList.add('_c');
-    // }
   }
 
   if (document.querySelectorAll('[data-scroll-to]').length) {

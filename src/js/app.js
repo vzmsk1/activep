@@ -11,3 +11,4 @@ import './lib/mask/mask';
 
 import './utils/script';
 import './utils/form';
+import './utils/modals';

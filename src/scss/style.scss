@@ -19,6 +19,7 @@ $gray: #c4c4c4;
 
 @import 'base/header';
 @import 'base/footer';
+@import 'base/modals';
 
 main {
   padding-top: 13rem;
@@ -29,7 +30,8 @@ main {
 }
 
 ._show-menu,
-._is-locked {
+._is-locked,
+.modal-show {
   body {
     overflow: hidden;
     touch-action: none;
@@ -61,12 +63,14 @@ main {
 }
 
 ._js-allowed {
-  [data-gsap-fadein] {
-    opacity: 0;
-  }
-  [data-gsap-y] {
-    opacity: 0;
-    transform: translateY(30%);
+  &:not(.listing-chapter &) {
+    [data-gsap-fadein] {
+      opacity: 0;
+    }
+    [data-gsap-y] {
+      opacity: 0;
+      transform: translateY(30%);
+    }
   }
 }
 
