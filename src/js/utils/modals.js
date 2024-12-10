@@ -43,9 +43,9 @@ document.documentElement.addEventListener('click', function (e) {
 });
 
 window.addEventListener('load', function (e) {
-  if (window.history.state && document.querySelectorAll('.modal').length) {
+  if (document.querySelectorAll('.modal').length) {
     document.querySelectorAll('.modal').forEach(item => {
-      if (window.history.state.path.includes(`?modal=${item.id}`)) {
+      if (window.location.href.includes(`?modal=${item.id}`)) {
         openModal(item.id);
       } else {
         const refresh =
