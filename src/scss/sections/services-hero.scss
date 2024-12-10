@@ -156,11 +156,15 @@
       }
 
       &._e {
-        transform: translateX(-31rem);
+        > span:last-child {
+          transform: translateX(-31rem);
+        }
       }
 
       &._f {
-        transform: translateX(23rem);
+        > span:last-child {
+          transform: translateX(-23rem);
+        }
       }
 
       &._a {

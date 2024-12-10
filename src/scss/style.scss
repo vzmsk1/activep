@@ -63,14 +63,22 @@ main {
 }
 
 ._js-allowed {
-  &:not(.listing-chapter &) {
-    [data-gsap-fadein] {
-      opacity: 0;
-    }
-    [data-gsap-y] {
-      opacity: 0;
-      transform: translateY(30%);
-    }
+  [data-gsap-fadein] {
+    opacity: 0;
+  }
+  [data-gsap-y] {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+}
+
+._js-allowed .listing-chapter {
+  [data-gsap-fadein] {
+    opacity: 1;
+  }
+  [data-gsap-y] {
+    opacity: 1;
+    transform: none;
   }
 }
 
