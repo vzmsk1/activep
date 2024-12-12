@@ -32,7 +32,7 @@ window.addEventListener('load', function () {
     } else if (charLength === 7 && charLength2 === 10) {
       document.querySelector('.services-hero__title').classList.add('_f');
     } else {
-      if (charLength <= 7) {
+      if (charLength <= 7 && charLength2 > 14) {
         document.querySelector('.services-hero__title').classList.add('_d');
       }
 
