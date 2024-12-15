@@ -25,8 +25,8 @@
 
   &__title-txt {
     ._js-allowed & {
-      margin-top: 3%;
-      opacity: 0;
+      // margin-top: 3%;
+      // opacity: 0;
     }
   }
 
@@ -80,13 +80,14 @@
   &__text {
     margin-bottom: 6rem;
 
-    max-width: 63.4rem;
+    // max-width: 63.4rem;
 
     line-height: 147%;
 
     ._js-allowed & {
-      opacity: 0;
-      transform: translateY(50%);
+      // opacity: 0;
+      // color: $white;
+      // transform: translateY(50%);
     }
 
     @media (min-width: 48em) {
@@ -104,8 +105,8 @@
 
   &__btn {
     ._js-allowed & {
-      opacity: 0;
-      transform: translateY(100%);
+      // opacity: 0;
+      // transform: translateY(100%);
     }
 
     @media (min-width: 48em) {

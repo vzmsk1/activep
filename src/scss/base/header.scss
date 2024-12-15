@@ -11,7 +11,7 @@
   background-color: $white;
 
   ._js-allowed & {
-    transform: translateY(-100%);
+    // transform: translateY(-100%);
   }
 
   --scaleX: 0;
@@ -32,7 +32,7 @@
 
       transform-origin: left;
       ._js-allowed & {
-        transform: scaleX(var(--scaleX));
+        // transform: scaleX(var(--scaleX));
       }
     }
   }
@@ -105,7 +105,7 @@
     // width: 26.1rem;
 
     ._js-allowed & {
-      opacity: 0;
+      // opacity: 0;
     }
 
     @media (max-width: 48em) {
@@ -176,7 +176,7 @@
     height: 100%;
 
     ._js-allowed & {
-      opacity: 0;
+      // opacity: 0;
     }
 
     &:nth-child(-n + 9) {
@@ -293,7 +293,7 @@
 
   &__hamburger {
     ._js-allowed & {
-      opacity: 0;
+      // opacity: 0;
     }
   }
 

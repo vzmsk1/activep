@@ -24,7 +24,7 @@
     @media (min-width: 48em) {
       transform-origin: left;
       ._js-allowed & {
-        transform: scaleX(var(--scaleX));
+        // transform: scaleX(var(--scaleX));
       }
     }
   }
@@ -75,7 +75,7 @@
     position: relative;
 
     ._js-allowed & {
-      opacity: 0;
+      // opacity: 0;
     }
 
     @media (min-width: 48em) {
@@ -94,7 +94,7 @@
 
           transform: translate(100%, -50%);
           ._js-allowed & {
-            transform: translate(100%, -50%) scaleY(var(--scaleY));
+            // transform: translate(100%, -50%) scaleY(var(--scaleY));
           }
         }
       }
@@ -119,7 +119,7 @@
           opacity: 0.6;
 
           ._js-allowed & {
-            transform: scaleX(var(--scaleX2));
+            // transform: scaleX(var(--scaleX2));
           }
           transform-origin: left;
         }

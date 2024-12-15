@@ -105,7 +105,20 @@ window.addEventListener('load', function () {
       e.target.closest('.header__item').querySelector('.header__sublist')
     ) {
       e.target.closest('.header__item').classList.toggle('_is-active');
+
+      if (
+        window.innerWidth <= 768 &&
+        !e.target.closest('.sublist-header__item')
+      ) {
+        e.preventDefault();
+      }
     }
+  }
+
+  if (window.innerWidth <= 768) {
+    document.querySelectorAll('.header__txt').forEach(item => {
+      item.removeAttribute('onclick');
+    });
   }
 
   document.addEventListener('click', onClickHandler);
